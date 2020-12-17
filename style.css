@@ -8,7 +8,7 @@ body {
   color: #333;
 }
 #menu ul {
-  background: #1F568B;
+  background: #1F568B;  <!-- #1F568B-->
   list-style-type: none;
   text-align: center;
 }
@@ -19,9 +19,11 @@ body {
   height: 40px;
   line-height: 40px;
   margin-left: -5px;
+  text-align: center;
 }
 #menu ul li a {
   color: #f1f1f1;
+  font-family: Bauhaus 93;
   text-decoration: none;
   display: inline-block;
   width: 120px;
@@ -50,6 +52,9 @@ body {
  margin-left: 0;
 }
 h1 {
-    margin-top: 30;
+	font-family: Bahnschrift;
     text-align: center;
+}
+#botpage {
+	background: #1F568B;
 }
