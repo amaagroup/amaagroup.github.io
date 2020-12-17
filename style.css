@@ -58,3 +58,23 @@ h1 {
 #botpage {
 	background: #1F568B;
 }
+#iright {
+       position: relative;
+}
+#iright img {
+       position: absolute;
+	   top: 0px;
+       right: 100px;
+	   width: 150px;
+	   height:150px;
+}
+#ileft {
+       position: relative;
+}
+#ileft img {
+       position: absolute;
+	   top: 0px;
+       left: 100px;
+	   width: 150px;
+	   height:150px;
+}
