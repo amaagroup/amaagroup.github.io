@@ -3,33 +3,38 @@
   padding: 0;
 }
 body {
-  background-color:#e2e2e2;
-  font-family: sans-serif;
-  color: #333;
+  background: linear-gradient(-45deg, #ffffff, #d8edea, #c8edea, #b8edea);
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
 }
 #menu ul {
-  background: #1F568B;  <!-- #1F568B-->
+  
   list-style-type: none;
   text-align: center;
+  background: linear-gradient(-45deg, #1f708b, #1F568B, #531f8b, #1f568b);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
 #menu li {
   color: #f1f1f1;
   display: inline-block;
-  width: 120px;
-  height: 40px;
+  width: 150px;
+  height: 55px;
   line-height: 40px;
-  margin-left: -5px;
+
   text-align: center;
 }
 #menu ul li a {
   color: #f1f1f1;
-  font-family: Bauhaus 93;
+  font-family: Tahoma;
+  font-size: 19px;
   text-decoration: none;
   display: inline-block;
-  width: 120px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
   line-height: 40px;
-  margin-left: -5px;
+
+  margin-top: 8px;
 }
 #menu ul li a:hover {
    background: #f1f1f1;
@@ -38,8 +43,11 @@ body {
 .sub-menu li {
   display: none;
 }
+.Menu {
+	text-align: center;
+}
 #menu li {
- position: relative;
+  position: relative;
 }
 .sub-menu {
  display: none;
@@ -56,7 +64,9 @@ h1 {
     text-align: center;
 }
 #botpage {
-	background: #1F568B;
+	background: linear-gradient(-45deg, #1f708b, #1F568B, #531f8b, #1f568b);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
 #iright {
        position: relative;
@@ -77,4 +87,9 @@ h1 {
        left: 100px;
 	   width: 150px;
 	   height:150px;
+}
+#bottext {
+		position: relative;
+		left: 100px;
+		color: #000000;
 }
