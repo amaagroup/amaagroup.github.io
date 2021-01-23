@@ -96,13 +96,14 @@ h1 {
        position: fixed;
 	   color:#ff0000;
        left: 10px;
-	   top:80px;
-
+	   top:65px;
+	   height:120px;
+	   width:80px;
 }
 #bmenu ul li a{
-	color: #19aaaa;
+	color: #ffffff;
 	font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
 	font-weight:bold;
     text-decoration: none;
 	text-align:center;
@@ -111,3 +112,11 @@ h1 {
 #sub-bmenu {
 	display:none;
 }
+#bmenu ul li a:hover {
+   background: #f1f1f1;
+   color: #333;
+   height:50px;
+}
+
+.icmenu:hover img { 
+	-webkit-transform: scale(1.2); transform: scale(1.2); }

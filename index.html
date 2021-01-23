@@ -34,11 +34,18 @@
 	</li>
   </ul>
 </div>
+<script>
+function scrollFunction() {
+    document.getElementById('sub-bmenu').style.display = "none";
+}
+
+window.onscroll = scrollFunction;
+</script>
 <div>
 	<div id="ileft">
 	<img src="/image/circle_logo.png" alt="AMAA">
 	</div>
-	<p id="t1" style = "font-family: 'Montserrat', sans-serif; margin-left: 300px; margin-top: 100px; margin-right: 200px; height: 200px;">
+	<p id="t1" style = "font-family: 'Montserrat', sans-serif; margin-left: 300px; margin-top: 100px; margin-right: 200px; height: 650px;">
 1. Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở phiên bản thử nghiệm và phát triển nên chưa có nhiều nội dung. Chúng tôi sẽ cập nhật trong thời gian tới. Nếu muốn hãy liên hệ với chúng tôi. Trân trọng!
 <button onclick="f1()">Go!</button>
 </p>
@@ -48,7 +55,7 @@
 <div id="iright">
 <img src="/image/snake.png" alt="Game">
 </div>
-<p style = "font-family: 'Montserrat', sans-serif; margin-left: 120px; margin-top: 100px; margin-right: 400px; height: 200px;">
+<p style = "font-family: 'Montserrat', sans-serif; margin-left: 120px; margin-top: 100px; margin-right: 400px; height: 650px;">
 2. Sử dụng python đề làm nhiều việc một cách đơn giản hơn với các thư viện của nó như pygame, django, numpy,...
 </p>
 </div>
@@ -56,7 +63,7 @@
 <div id="ileft">
 <img src="/image/cht.png" alt="CHT">
 </div>
-<p style = "font-family: 'Montserrat', sans-serif; margin-left: 300px; margin-top: 100px; margin-right: 200px; height: 200px;">
+<p style = "font-family: 'Montserrat', sans-serif; margin-left: 300px; margin-top: 100px; margin-right: 200px; height: 650px;">
 3. T1K27 CHT - Toán 1 khóa 27 trường THPT chuyên Hà Tĩnh
 </p>
 </div>
@@ -65,7 +72,7 @@
 <div id="iright">
 <img src="/image/Logo_Hust.png" alt="HUST">
 </div>
-<p style = "font-family: 'Montserrat', sans-serif; margin-left: 120px; margin-top: 100px; margin-right: 400px; height:200px;">
+<p style = "font-family: 'Montserrat', sans-serif; margin-left: 120px; margin-top: 100px; margin-right: 400px; height:650px;">
 4. HUST - Ha Noi University of Sience and Tecnology
 </p>
 </div>
@@ -73,7 +80,7 @@
 <div id="ileft">
 <img src="/image/logo.png" alt="AMAA">
 </div>
-<p style = "font-family: 'Montserrat', sans-serif; margin-left: 300px; margin-top: 100px; margin-right: 200px; height: 200px;">
+<p style = "font-family: 'Montserrat', sans-serif; margin-left: 300px; margin-top: 100px; margin-right: 200px; height: 650px;">
 5. Hmm.................................................
 </p>
 </div>
@@ -93,10 +100,7 @@
 <br><br><br>
 <br><br><br>
 <br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
+
 <div id="botpage">
 <br><br><br>
 <!--center style = "font-family:Poppins,sans-serif; font-size: 30px; font-weight: bolder;">Tập đoàn công nghệ AMAA - AMAA Group</center-->
@@ -106,11 +110,11 @@ Trang web này đang trong quá trình hoàn thiện. Nội dung ở đây sẽ 
 </p>
 </div>
 <div id="bmenu">
-<img id="imenu" src="/image/menu.png" style="height:40px;" alt="bmenu" onclick="bmenu()"></img>
+<img id="imenu" class="icmenu" src="/image/menu.png" style="height:40px; display=none;" alt="bmenu" onclick="bmenu()" onmouseover="this.src='/image/menuhover.png'" onmouseout="this.src='/image/menu.png'"></img>
 <div id="sub-bmenu""><ul>
 <li><a href="https://amaagroup.github.io/"> Home</a></li>
-    <li><a href="#"> L.hệ</a></li>
-    <li><a href="#"> Đ.tư</a></li>
+    <li><a href="#"> Liên hệ</a></li>
+    <li><a href="#"> Đầu tư</a></li>
 	<li><a href="#"> G.Thiệu</a></li>
 	</ul></div>
 </div>
