@@ -3,17 +3,17 @@
   padding: 0;
 }
 body {
-  background: linear-gradient(-45deg, #ffffff, #d8edea, #c8edea, #b8edea);
+  background: linear-gradient(-45deg, #f12222, #ca5c0e, #3ae5d7, #8bff89);
   background-size: 400% 400%;
-  animation: gradient 2s ease infinite;
+  animation: gradient 10s cubic-bezier(0.67, 1.21, 0, 0.4) infinite;
 }
 #menu ul {
   
   list-style-type: none;
   text-align: center;
-  background: linear-gradient(-45deg, #1f708b, #1F568B, #531f8b, #1f568b);
+  background: linear-gradient(45deg, #000000, #29aecf, #0e478c, #000a84);
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 8s ease infinite;
 }
 #menu li {
   color: #f1f1f1;
@@ -26,7 +26,7 @@ body {
 }
 #menu ul li a {
   color: #f1f1f1;
-  font-family: Tahoma;
+  font-family: 'Montserrat', sans-serif;
   font-size: 19px;
   text-decoration: none;
   display: inline-block;
@@ -60,11 +60,11 @@ body {
  margin-left: 0;
 }
 h1 {
-	font-family: Bahnschrift;
+	font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 #botpage {
-	background: linear-gradient(-45deg, #1f708b, #1F568B, #531f8b, #1f568b);
+	background: linear-gradient(-45deg, #bb1cd2, #6ab6ff, #230048, #0093fb);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
 }
@@ -74,8 +74,8 @@ h1 {
 #iright img {
        position: absolute;
 	   top: 0px;
-       right: 100px;
-	   width: 150px;
+       right: 125px;
+	   
 	   height:150px;
 }
 #ileft {
@@ -85,11 +85,29 @@ h1 {
        position: absolute;
 	   top: 0px;
        left: 100px;
-	   width: 150px;
+	   
 	   height:150px;
 }
 #bottext {
 		position: relative;
-		left: 100px;
-		color: #000000;
+		left: 80px;
+}
+#bmenu {
+       position: fixed;
+	   color:#ff0000;
+       left: 10px;
+	   top:80px;
+
+}
+#bmenu ul li a{
+	color: #19aaaa;
+	font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+	font-weight:bold;
+    text-decoration: none;
+	text-align:center;
+    line-height: 30px;
+}
+#sub-bmenu {
+	display:none;
 }
