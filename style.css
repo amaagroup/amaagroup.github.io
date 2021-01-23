@@ -3,9 +3,9 @@
   padding: 0;
 }
 body {
-  background: linear-gradient(-45deg, #f12222, #ca5c0e, #3ae5d7, #8bff89);
-  background-size: 400% 400%;
-  animation: gradient 10s cubic-bezier(0.67, 1.21, 0, 0.4) infinite;
+  background: linear-gradient(-45deg, #2be814, #29aecf, #2977d6, #05c351);
+  background-size: 100% 100%;
+  animation: gradient 8s ease infinite;
 }
 body hr{
 	width:100%;
@@ -67,9 +67,7 @@ h1 {
     text-align: center;
 }
 #botpage {
-	background: linear-gradient(-45deg, #bb1cd2, #6ab6ff, #230048, #0093fb);
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+	background-color: #373737;
 }
 #iright {
        position: relative;
@@ -119,4 +117,24 @@ h1 {
    background: #f1f1f1;
    color: #333;
    height:50px;
+}
+#part2 {
+	background: linear-gradient(45deg, #000000, #29aecf, #092e5b, #000757);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+}
+#part4 {
+	background: linear-gradient(45deg, #000000, #29aecf, #092e5b, #000757);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+}
+#part3 {
+	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+}
+#part5 {
+	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
 }
