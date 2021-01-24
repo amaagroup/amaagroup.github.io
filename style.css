@@ -72,8 +72,16 @@ h1 {
 50%   {font-size:19vw;}
 100%  {font-size:25vw;}
 }
-
-
+@keyframes invest {
+0% {height:50vh;}
+50%   {height:42vh;}
+100%  {height:50vh;}
+}
+#but1 {
+	position:absolute;
+	top:1235px;
+	left: 42vw;
+}
 #botpage {
 	background-color: #373737;
 }
@@ -129,8 +137,28 @@ h1 {
    color: #333;
    height:50px;
 }
+.button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  background-color: #fff300;
+	font-size: 20px;
+	padding: 14px 40px;
+	width: 200px;
+	border-radius: 15px;
+	color: black;
+	border: 3px solid #DC143C;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:bold;
+	cursor: pointer;
+}
+
+.button:hover {
+  background-color: crimson;
+  color: white;
+}
+
 #part2 {
-	background: linear-gradient(45deg, #000000, #29aecf, #092e5b, #000757);
+	background: linear-gradient(45deg, #000000, #18768d, #06203f, #000539);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
 }
