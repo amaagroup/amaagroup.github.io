@@ -66,6 +66,14 @@ h1 {
 	font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+
+@keyframes welcome {
+0% {font-size:25vw;}
+50%   {font-size:19vw;}
+100%  {font-size:25vw;}
+}
+
+
 #botpage {
 	background-color: #373737;
 }
@@ -74,7 +82,7 @@ h1 {
 }
 #iright img {
        position: absolute;
-	   top: 50px;
+	   top: 80px;
        right: 10%;
 	   
 	   height:150px;
@@ -84,14 +92,17 @@ h1 {
 }
 #ileft img {
        position: absolute;
-	   top: 50px;
+	   top: 80px;
        left: 8%;
 	   
 	   height:150px;
 }
 #bottext {
 		position: relative;
-		left: 8%;
+
+}
+#bottext p{
+	margin-left: 8%;
 }
 #bmenu {
        position: fixed;
@@ -120,21 +131,21 @@ h1 {
 }
 #part2 {
 	background: linear-gradient(45deg, #000000, #29aecf, #092e5b, #000757);
-  background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
 }
 #part4 {
 	background: linear-gradient(45deg, #000000, #29aecf, #092e5b, #000757);
-  background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
 }
 #part3 {
 	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
-  background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
 }
 #part5 {
 	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
-  background-size: 200% 200%;
-  animation: gradient 8s ease infinite;
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
 }
