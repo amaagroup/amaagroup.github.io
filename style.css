@@ -10,6 +10,9 @@ body {
 body hr{
 	width:100%;
 }
+#menu{
+	width:100%;
+}
 #menu ul {
   
   list-style-type: none;
@@ -66,21 +69,26 @@ h1 {
 	font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
-
+.classname {
+	-webkit-animation-name: welcome;
+  -webkit-animation-duration: 3s; 
+  -webkit-animation-iteration-count: 2;
+  animation-name: welcome;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+}
 @keyframes welcome {
 0% {font-size:25vw;}
 50%   {font-size:19vw;}
 100%  {font-size:25vw;}
 }
 @keyframes invest {
-0% {height:50vh;}
-50%   {height:42vh;}
-100%  {height:50vh;}
+0% {height:40vh;}
+50%   {height:32vh;}
+100%  {height:40vh;}
 }
 #but1 {
-	position:absolute;
-	top:1235px;
-	left: 42vw;
+	position:relative;
 }
 #botpage {
 	background-color: #373737;
@@ -115,8 +123,8 @@ h1 {
 #bmenu {
        position: fixed;
 	   color:#ff0000;
-       left: 10px;
-	   top:65px;
+       right: 0px;
+	   top:10px;
 	   height:120px;
 	   width:80px;
 }
@@ -138,12 +146,12 @@ h1 {
    height:50px;
 }
 .button {
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  background-color: #fff300;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #fff300;
 	font-size: 20px;
 	padding: 14px 40px;
-	width: 200px;
+	margin-top:100px;
 	border-radius: 15px;
 	color: black;
 	border: 3px solid #DC143C;
@@ -153,11 +161,17 @@ h1 {
 }
 
 .button:hover {
+
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
   background-color: crimson;
   color: white;
+  padding: 18px 45px;
+  margin-top:96px;
+  
 }
 
-#part2 {
+#part3 {
 	background: linear-gradient(45deg, #000000, #18768d, #06203f, #000539);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
@@ -167,7 +181,7 @@ h1 {
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
 }
-#part3 {
+#part2 {
 	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
