@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing:border-box;
 }
 body {
   background: linear-gradient(-45deg, #2be814, #29aecf, #2977d6, #05c351);
@@ -10,6 +11,7 @@ body {
 body hr{
 	width:100%;
 }
+ul { list-style-type: none; }
 #menu{
 	width:100%;
 }
@@ -190,4 +192,7 @@ h1 {
 	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
     background-size: 200% 200%;
     animation: gradient 8s ease infinite;
+}
+.active, .dot:hover {
+	color:black;
 }

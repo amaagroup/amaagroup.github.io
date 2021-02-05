@@ -12,7 +12,7 @@
 <body>
 
 <!--h1>Tập đoàn công nghệ AMAA</h1-->
-<div id="menu" z-index="1">
+<div id="menu">
 
   <ul>
   <!--img src="/image/circle_logo.png" alt="AMAA" style="width: 30px;height:30px; margin-left:25px;margin-top:7px; margin-right:150px;"-->
@@ -43,7 +43,7 @@ function scrollFunction() {
 }
 function zo(){
 document.getElementById('zo').className ='classname';
-document.getElementById('zo').style =" font-family: 'Montserrat', sans-serif;font-weight:bold; color:white; margin-top:300px;cursor:default;";
+document.getElementById('zo').style =" font-family: 'Montserrat', sans-serif;font-weight:bold; color:white; margin-top:300px;cursor:default;text-shadow: 6px 3px #000000;";
 }
 function contact(){
 	if (invest) {alert('Đang liên hệ...');
@@ -64,7 +64,7 @@ window.onscroll = scrollFunction;
   animation-name: welcome;
   animation-duration: 3s;
   animation-iteration-count: 1;">
-<a id="zo" onclick="zo()" style="font-family: 'Montserrat', sans-serif;font-weight:bold; color:white; margin-top:300px; cursor: pointer;">AMAA</a></div>
+<a id="zo" onclick="zo()" style="font-family: 'Montserrat', sans-serif;font-weight:bold; color:white; margin-top:300px; cursor: pointer;text-shadow: 6px 3px #000000;">AMAA</a></div>
 <p id="t1" style="font-family: 'Montserrat', sans-serif; margin-left: 20%; margin-top: 50px; margin-right: 15%;">
 Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở phiên bản thử nghiệm và phát triển nên chưa có nhiều nội dung. Chúng tôi sẽ cập nhật trong thời gian tới. Nếu muốn hãy liên hệ với chúng tôi. Trân trọng!
 </p>
@@ -83,11 +83,11 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 </span>
 <br><br>
 <center>
-<div style="font-family:'Montserrat';
+<div style="font-family:'Montserrat',sen-serif;
     display: inline-flex;
 ">
 
-<div style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 15px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white;">
+<div id="chu-tich" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 15px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white;">
 <span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Chủ tịch:</span></span><br>
 <span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
 <span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
@@ -97,7 +97,7 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 <button class="button" onclick="contact()">Liên hệ</button>
 </div>
 
-<div style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 5px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white;">
+<div id="pho-chu-tich" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 5px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white;">
 <span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Phó chủ tịch:</span></span><br>
 <span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
 <span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
@@ -107,7 +107,7 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 <button class="button" onclick="contact()">Liên hệ</button>
 </div>
 
-<div style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 5px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white; cursor:not-allowed;">
+<div id="bao-ve" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 5px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white; cursor:not-allowed;">
 <span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Bảo vệ:</span></span><br>
 <span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
 <span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
@@ -124,20 +124,21 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 <!--div id="iright">
 <img src="/image/snake.png" alt="Game">
 </div-->
-<div id="n" style="margin-top: 0px; height: 735px;">
+<div id="n" style="margin-top: 0px; height: 785px;">
 <p style="font-family: 'Montserrat', sans-serif; color:#fff300; margin-left: 10%; margin-right: 20%;">
 <br><br><br>
 3. Hãy đầu tư ngay để tập đoàn trở thành đa cấp số một thế giới. Nếu thành công, bạn sẽ được chia lợi nhuận hấp dẫn lên tới 80%. Còn chần chừ gì nữa, hãy nhanh tay bấm nút "Đầu tư" đi nào!
 <br><br><br><br></p>
 <center>
-<svg width="400" height="350">
-<polyline points="0,0 0,350 400,350"
+<!--svg width="360" height="350">
+<polyline points="0,0 0,350 360,350"
       fill="transparent" stroke="red" stroke-width="3" />
-<polyline points="10,340 80,300 160,250 240,110 320,50 395,20 372,10 395,20 387,45"
+<polyline points="10,340 80,300 160,250 240,110 320,50 360,20 345,10 360,20 352,45"
       fill="transparent" stroke="yellow" stroke-width="5" />
-<circle cx="365" cy="32" r="8" fill="red" stroke-width="7"/>
-<text fill="#ffffff" font-size="15" font-family="Verdana" x="345" y="70">y=f(x)</text>
-</svg>
+<circle cx="315" cy="32" r="8" fill="red" stroke-width="7"/>
+<text fill="#ffffff" font-size="15" font-family="Verdana" x="305" y="70">y=f(x)</text>
+</svg-->
+<img src="/image/invest.gif" width="25%"/>
 </center>
 <center><button id="but1" class="button" onclick="alert('Bạn đã đầu tư thành công! Xin chúc mừng!');invest=true;">Đầu tư</button></center>
 </div>
@@ -145,13 +146,64 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
  
 <div id="part4" style="background-color:#199999;">
 
-<div id="iright">
+<!--div id="iright">
 <img src="/image/Logo_Hust.png" alt="HUST">
-</div>
-<p style="font-family: 'Montserrat', sans-serif; color:#fff300; margin-left: 10%; margin-top: 0px; margin-right: 20%; height:735px;">
+</div-->
+<p style="font-family: 'Montserrat', sans-serif; color:#fff300; margin-left: 10%; margin-top: 0px; margin-right: 20%; height:150px;">
 <br><br><br>
 4. HUST - Ha Noi University of Sience and Technology
 </p>
+
+<center><div class="card_container">
+		<div class="card"><img src="/image/card.png" width="60%" /></div>
+		<div class="card"><img src="/image/card2.png" width="60%" /></div>
+		<div class="card"><img src="/image/card3.png" width="60%" /></div>
+	</div>
+<div style="text-align:center; color:gray;">
+        <span class="dot" onclick="currentSlide(0)" style="font-size:85px; cursor:pointer;">.</span> 
+        <span class="dot" onclick="currentSlide(1)" style="font-size:85px; cursor:pointer;">.</span> 
+		<span class="dot" onclick="currentSlide(2)" style="font-size:85px; cursor:pointer;">.</span> 
+      </div>  	
+</center>
+<script>
+      //khai báo biến slideIndex đại diện cho slide hiện tại
+      var slideIndex,t;
+      // KHai bào hàm hiển thị slide
+      function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("card");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";  
+          }
+		  for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+          slides[slideIndex].style.display = "block"; 
+		  dots[slideIndex].className += " active";		  
+          //chuyển đến slide tiếp theo
+          slideIndex++;
+          //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+          if (slideIndex > slides.length - 1) {
+            slideIndex = 0
+          }    
+		  console.log('slide '+ slideIndex);
+          //tự động chuyển đổi slide sau 5s
+          t = setTimeout(showSlides, 5000);
+      }
+      //mặc định hiển thị slide đầu tiên 
+      showSlides(slideIndex = 0);
+	  
+      function currentSlide(n) {
+	    clearTimeout(t);
+		showSlides(slideIndex = n);
+		
+      }
+</script>
+
+
+<br><br><br>
 </div>
  
 <div id="part5">
