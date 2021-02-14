@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<title>Typing Test</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/image/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/image/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/image/icon/favicon-16x16.png">
+<meta charset="UTF-8"/>
+<head>
+<body onload="document.forms.formb.testbox.focus();">
+<style>
+* {
+	margin:0;
+	padding:0;
+}
+p {
+	text-align:center;
+	font-size:40px;
+	font-family:Verdana,san-serif;
+}
+span {
+	padding-left:5px;
+}
+/* id css */
+#box span:hover{
+	cursor:default;
+}
+#timer {
+	font-size: 30px;
+}
+#result :hover{
+	background-color: lime;
+	cursor: pointer;
+}
+/* classes css */
+.word {
+	color:#000000;
+	font-family:san-serif;
+	font-size:30px;
+}
+.active {
+	background-color: #DDDDDD;
+}
+.button {
+	position: absolute;
+	left: 1035px;
+	width: 55px;
+	height: 55px;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+
+/* keyframes css */
+@keyframes button {
+	100% {left:1080px;}
+}
+@keyframes result {
+	50% {
+		width: 230px;
+		height: 280px;
+	}
+}
+@keyframes wpm {
+	50% {font-size: 34px;}	
+}
+@keyframes fly {
+	0%,100% {left: 41%;
+	top: 100px;}
+	25% {left: 41%; top: 63px;}
+	50% {left: 58%; top: 63px;}
+	75% {left: 58%; top: 100px;}
+}
+</style>
+<script>
+	// Khai báo biến
+	var timer=59,wordIndex=0,tmp,char=0;
+	var start=false,first=true,normal=true,a=true;
+	var wordIndex,timer=59,cc=0,wc=0,wpm=0;
+	var words = document.getElementsByClassName("word");
+	var dictionary = ['bắt','đầu','kiểm','tra','tốc','độ','đánh','máy','của','bạn','gõ','phím','để','bầu','trời','trường','học','quy','biển','điện','tử','dạ','vâng','công','nghệ','gió','cầu','đường','xin','lỗi','cổ','tích','loài','vật','em','bay','thơ','cảm','giao','thông','mà','giao','thông','vui','vẻ','là','rán','cảm','con','người','phải','hay','khoa','bánh','trường','học','hà','nội','in','lang','dạy','nhung','chào','khó','khăn','phép','thế','giới','sống','hỷ','gì','bay','vì','vệ','sinh','thi','hành','trường','học','phương','ngày','tình','yêu','sơ','ngủ','cười','nắng','phần','tia','nắng','thi','hành','ký','tên','đơn','bướm','kĩ','thuật','đợi','chi','sung','sướng','cổ','tích','hạnh','phúc','trả','lời','phần','món','ăn','phố','xin','bóng','xã','hội','khoa','dạy','trời','lũ','mình','ký','tên','anh','hi','thư','bóng','viết','lách','bánh','lịch','sử','cuộc','đời','pháp','luật','hoàn','toàn','cô','tổ','quốc','hà','công','trình','xanh','nắng','tên','rán','chăm','giành','lành','bão','sài','gòn','kinh','mình','bếp','hãy','trả','lời','hoài','nhạc','vui','vẻ','hả','kĩ','thuật','thanh','niên','đinh','hay','nga','quảng','bình','theo','thành','ngành','giấy','tờ','bao','quát','nhà','cao','công','nghệ','chính','thay','mặt','lại','đi','phải','thơ','nhà','xin','lỗi','kính','phải','là','làm','viết','lách','giấy','tờ','hà','nội','xa','đàn','sáo','báo','nào','xanh','tin','sinh','khoa','phối','hợp','quảng','bình','theo','ẩm','thực','quảng','nam','hoài','công','trình','phép','đỏ','thanh','đơn','dũng','bão','ngữ','văn','món','ăn','bếp','làm','sinh','đất','ngoài','da','sinh','học','ngữ','văn','khỏe','mạnh','bà','tôi','vệ','sinh','lại','đi','xã','hội','phương','gửi','xa','hạt','biển','bao','quát','kiến','trúc','chị','khánh','cao','phép','kính','thanh','bà','nhân','dân','em','lựu','xây','dựng','chào','sợ','giành','dũng','phủ','tỉnh','sài','gòn','độc','lập','hãy','tia','nắng','ngành','ngoài','phủ','minh','chim','khóc','trong','chú','năm','trang','dễ','dàng','đỏ','đợi','chi','hướng','nga','dễ','dàng','quảng','nam','pháp','luật','trời','ba','lang','đánh','tỉnh','hả','thang','gió','cuộc','đời','chị','lành','cười','mẹ','sư','phạm','hướng','phố','in','tu'];
+</script>
+<div>
+<p>Typing test </p><br>
+<p id="timer">1:00</p><br>
+<center>
+	<!-- văn bản để kiểm tra -->
+<div id="box" style="background-color: #add5ff; width:645px; height:100px; padding:5px 5px;">
+<span id="word0" class="word">  </span>			<span id="word1" class="word">  </span>
+<span id="word2" class="word">  </span>			<span id="word3" class="word">  </span>
+<span id="word4" class="word">  </span>			<span id="word5" class="word">  </span>
+<span id="word6" class="word">  </span>			<span id="word7" class="word">  </span>
+<span id="word8" class="word">  </span>			<span id="word9" class="word">  </span>
+<span id="word10" class="word">  </span>		<span id="word11" class="word">  </span>
+<span id="word12" class="word">  </span>		<span id="word13" class="word">  </span>
+<span id="word14" class="word">  </span>		<span id="word15" class="word">  </span>
+<span id="word16" class="word">  </span>		<span id="word17" class="word">  </span>
+<span id="word18" class="word">  </span>		<span id="word19" class="word">  </span>
+<span id="word20" class="word">  </span>		<span id="word21" class="word">  </span>
+<span id="word22" class="word">  </span>		<span id="word23" class="word">  </span>
+<span id="word24" class="word">  </span>		<span id="word25" class="word">  </span>
+
+</div>
+<br><br>
+<div id="input">
+<script>
+	// Tạo mới văn bản
+	function creatnew() {
+			var x;
+			x = Math.floor(Math.random()*(dictionary.length - 1));
+			for (var i=0;i<words.length;i++)
+				{	x = Math.floor(Math.random()*(dictionary.length - 1));
+					document.getElementById('word'+i).innerHTML = ' ' + dictionary[x];
+					document.getElementById('word'+i).style.color = '#000000';
+				}
+			if (first) {x = Math.floor(Math.random()*(dictionary.length - 1));
+					document.getElementById('word0').innerHTML = dictionary[x]+' '; first=false;}
+			tmp=document.getElementById('word0').innerHTML;
+	  }
+	// Tô từ cần gõ
+    function activeword() {
+          var i;
+		  for (i = 0; i < words.length; i++) {
+              words[i].className = words[i].className.replace(" active", "");
+          }
+		  words[wordIndex].className += " active";
+		  tmp=words[wordIndex].innerHTML;
+		  if (wordIndex==0) creatnew();
+		  wordIndex++;
+		  
+          if (wordIndex > words.length - 1) {
+			wordIndex = 0;
+          }    
+      }	  
+	// Đồng hồ đếm ngược
+	function count() {
+			start=true;
+			if (timer>=10) document.getElementById('timer').innerHTML = '0:'+timer;
+			if (timer<10) document.getElementById('timer').innerHTML = '0:0'+timer;
+			timer-=1;
+			if (timer>=0) setTimeout(count,1000);
+			else {result();}
+	  }
+	// Kiểm tra gõ
+	function check() {
+			if (event.key == ' ') {
+			last=document.getElementById('testbox').value;
+			var x=wordIndex-1;
+			if (x==-1) x=words.length-1;
+			if (last==tmp) {
+				document.getElementById('word'+x).style.color = '#00dd00';
+				wc++;
+				for (var i=0;i<tmp.length;i++) {
+					if (tmp[i]==' ') {char+=1;}
+					else if (tmp[i]=='ă'||tmp[i]=='â'||tmp[i]=='đ'||tmp[i]=='ê'||tmp[i]=='ô'||tmp[i]=='ơ'||tmp[i]=='ư'||tmp[i]=='á'||tmp[i]=='à'||tmp[i]=='ả'||tmp[i]=='ã'||tmp[i]=='ạ'||tmp[i]=='é'||tmp[i]=='è'||tmp[i]=='ẻ'||tmp[i]=='ẽ'||tmp[i]=='ẹ'||tmp[i]=='í'||tmp[i]=='ì'||tmp[i]=='ỉ'||tmp[i]=='ĩ'||tmp[i]=='ị'||tmp[i]=='ó'||tmp[i]=='ò'||tmp[i]=='ỏ'||tmp[i]=='õ'||tmp[i]=='ọ'||tmp[i]=='ú'||tmp[i]=='ù'||tmp[i]=='ủ'||tmp[i]=='ũ'||tmp[i]=='ụ'||tmp[i]=='ý'||tmp[i]=='ỳ'||tmp[i]=='ỷ'||tmp[i]=='ỹ'||tmp[i]=='ỵ') {char+=2; }
+					else if (tmp[i]=='a'||tmp[i]=='b'||tmp[i]=='c'||tmp[i]=='d'||tmp[i]=='e'||tmp[i]=='g'||tmp[i]=='h'||tmp[i]=='i'||tmp[i]=='k'||tmp[i]=='l'||tmp[i]=='m'||tmp[i]=='n'||tmp[i]=='o'||tmp[i]=='p'||tmp[i]=='q'||tmp[i]=='r'||tmp[i]=='s'||tmp[i]=='t'||tmp[i]=='u'||tmp[i]=='v'||tmp[i]=='x'||tmp[i]=='y') {char+=1; }
+					else char+=3;
+				}
+				cc+=char;
+				char=0;
+			}
+			else document.getElementById('word'+x).style.color = '#dd0000';
+			document.getElementById('testbox').value ='';
+			activeword();
+		}
+			
+	}
+	// Hiện kết quả và hiệu ứng
+	function result(){
+		wpm=cc/5;
+		document.getElementById('box').style.display = 'none';
+		document.getElementById('result').style.display = 'block';
+		document.getElementById('wpm').innerHTML = wpm + ' WPM';
+		document.getElementById('wpm').style.animation = 'wpm 2s 0.1s 5';
+		document.getElementById('cc').innerHTML = 'Character correct: '+cc;
+		document.getElementById('wc').innerHTML = 'Word correct: &emsp;&nbsp;&nbsp;'+wc;
+		document.getElementById('dot').style.animationPlayState = 'paused';
+		document.body.style.background = '#00ffff';
+	  }
+	// Đùa tí
+	function move() {
+		if (a==true){
+			document.getElementById('but').style.left= '1100px';
+			a=false;
+		}
+		else {
+		document.getElementById('but').style.left='1035px';
+		a=true;
+	}
+	}
+
+	activeword();
+</script>
+<form id="formb" >
+<input id="testbox" type="text"  placeholder="Type here" value=" " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="height:55px;width:500px;font-size:30px;padding:0px 10px;" onload="this.focus();this.select();" onkeydown="if (start) {check()};if (start==false) {count();}"/>
+<button id="but" class="button" onclick="location.reload()" onmouseover="move()"><span id="refresh" style="color: #000000;">Again</span></button></form>
+</div><br><br>
+
+
+<div id="result" style="background-color:#e3e3e3;font-size:16px;text-align:left;width:200px;height:230px;padding:10px 10px;font-family: Verdana;">
+<br>
+<center><span id="wpm" style="font-size:25px;font-weight: bolder;color:green;font-family: Verdana;">0 WPM</span></center><br><br>
+<span id="cc">Character correct: 0</span><br><br>
+<span id="wc">Word correct: &emsp;&nbsp;&nbsp; 0</span><br><br>
+</div>
+</center>
+<svg id="dot" width="10" height="10" style="background-color: transparent; position:absolute; left: 41%; top: 100px; z-index: 9999; animation: fly 2s 0s infinite;">
+	<circle cx="5" cy="5" r="3" fill="red"/>
+</svg>
+</div>
+</body>
+</html>
