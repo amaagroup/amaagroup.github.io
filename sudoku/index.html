@@ -146,12 +146,17 @@
         </p>
         <script>
             var S=[];
+            function tamdung(){
+                tamdung();
+            }
             function printSolution(){
-                var i = 0;
+                var i = 0,x;
                 for(i = 0; i < 81; i++){
-                        document.getElementsByTagName('input')[i].value= S[i];
+                    x =  document.getElementsByTagName('input')[i];
+                    x.value = S[i];
+                    x.disabled = 'disabled';
                 }
-                document.getElementsByTagName('input').disabled = 'disabled';
+                tamdung();
             }
             function feasible( x, y, k){
                 var i = 0, j = 0;
@@ -170,12 +175,11 @@
                 return 1;
 
             }
-
+                           
             function solve_sudoku(x, y){
                 if(y == 9){
                     if(x == 8){
                         printSolution();
-
                     } else {
                         solve_sudoku( x+1,0);
                     }
