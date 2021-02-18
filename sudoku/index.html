@@ -10,6 +10,7 @@
             * {
                 margin: 0;
                 padding: 0;
+                font-family: monospace;
             }
             input[type=number] {
                 border: 1px dotted #000;
@@ -17,6 +18,7 @@
                 width: 30px;
                 font-size: 20px;
                 text-align: center;
+                color: #0000dd;
             }
             .left {
                 border-left: 2px solid #000!important;
@@ -146,15 +148,15 @@
         </p>
         <script>
             var S=[];
+            var i,elemnt,d,start,kt;
             function tamdung(){
                 tamdung();
             }
             function printSolution(){
-                var i = 0,x;
                 for(i = 0; i < 81; i++){
-                    x =  document.getElementsByTagName('input')[i];
-                    x.value = S[i];
-                    x.disabled = 'disabled';
+                    elemnt =  document.getElementsByTagName('input')[i];
+                    elemnt.value = S[i];
+                    elemnt.disabled = true;
                 }
                 tamdung();
             }
@@ -175,8 +177,19 @@
                 return 1;
 
             }
-                           
+            function again(){
+                for ( i=0;i<81;i++)
+                    {   elemnt = document.getElementsByTagName('input')[i]
+                        S[i] = elemnt.value = null;
+                        elemnt.style.color = '#0000dd';
+                        elemnt.disabled = false;
+                    }
+                console.clear();
+            }               
             function solve_sudoku(x, y){
+                d = new Date();
+                kt=d.getTime();
+                if (kt-start>1000) {alert('Không giải được');again();tamdung();}
                 if(y == 9){
                     if(x == 8){
                         printSolution();
@@ -207,17 +220,28 @@
                         9,0,0,8,0,0,0,0,2,
                         0,0,3,5,0,0,0,6,7,
                         7,2,0,0,0,4,3,8,0];*/
-            var i;        
+                d = new Date();
+                start = d.getTime();       
                 for ( i=0;i<81;i++)
-                    {S[i] = document.getElementsByTagName('input')[i].valueAsNumber;
-                    if (S[i] != S[i] || S[i]>9 || S[i]<0) S[i]=0;    
+                    {   elemnt = document.getElementsByTagName('input')[i]
+                        S[i] = elemnt.valueAsNumber;
+                        if (S[i] != S[i] || S[i]>9 || S[i]<=0) {S[i]=0;elemnt.style.color = 'green';}    
                 }
                 solve_sudoku(0,0);
             }
+
         </script>
-        <button class="button" onclick="run()">Solve</button><br />
-        <button class="button" onclick="alert('                             Hướng dẫn\nNhập vào: Chọn vào ô rồi nhập số hoặc dùng phím mũi tên lên và xuống\nÔ nào chưa biết thì nhập số 0 hoặc để trống\nNhững giá trị khác (0-9) đều được hiểu là ô trống\nSau khi nhập xong bấm Solve để giải')">Hướng dẫn</button>    
-        </center>
+        <button class="button" onclick="console.clear();run();">Solve</button><br />
+        <button class="button" onclick="document.getElementById('hd').style.display = 'block' ">Hướng dẫn</button>    
+        <button class="button" onclick="again()">Làm lại</button>
+            </center>
+        <div id="hd" style="background-color: aqua; position: absolute;top: 105px;left: 30%; padding: 15px 10px; width: 40%;display: none; font-size: larger;">
+            <span class="hd" style="color: green;">&emsp;&emsp;&emsp; Hướng dẫn</span><br /><br />
+            <span class="hd"><li>Nhập vào: Chọn vào ô rồi nhập số hoặc dùng phím mũi tên lên và xuống</li></span><br /><br />
+            <span class="hd"><li>Ô nào chưa biết thì nhập số 0 hoặc để trống</li></span><br /><br />
+            <span class="hd"><li>Những giá trị khác (0-9) đều được hiểu là ô trống</li></span><br /><br />
+            <span class="hd"><li>Sau khi nhập xong bấm Solve để giải</li></span>
+            <div style="position: absolute; top: 4px;left: 95%;"><a style="color: red; cursor: pointer;" onclick="document.getElementById('hd').style.display = 'none' ">X</a></div>
         </div>
     </body>
 </html>
