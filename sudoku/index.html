@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sudoku</title>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/ico" href="/image/icon/favicon.ico" />
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            input[type=number] {
+                border: 1px dotted #000;
+                height: 30px;
+                width: 30px;
+                font-size: 20px;
+                text-align: center;
+            }
+            .left {
+                border-left: 2px solid #000!important;
+            }
+            
+            .right {
+                border-right: 2px solid #000!important;
+            }
+            .top {
+                border-top: 2px solid #000!important;
+            }
+            .bottom {
+                border-bottom: 2px solid #000!important;
+            }
+            .button {
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+                background-color: #fff300;
+                font-size: 1em;
+                padding: 10px 15px;
+                margin-top:30px;
+                border-radius: 10px;
+                color: black;
+                border: 3px solid #DC143C;
+                font-family: 'Montserrat', sans-serif;
+                font-weight:bold;
+                cursor: pointer;
+            }
+
+            .button:hover {
+
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+            background-color: crimson;
+            color: white;
+
+            margin-top:30px;
+            
+            }
+        </style>
+        <br />
+        <p style="font-size: 40px;text-align: center;">SUDOKU</p><br /><br />
+        <div id="table">
+        <center>
+        <p>
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+            <input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
+            <input autocomplete="off" maxlength="1" class="bottom right" type="number" min="0" max="9"><br>
+        </p>
+        <script>
+            var S=[];
+            function printSolution(){
+                var i = 0;
+                for(i = 0; i < 81; i++){
+                        document.getElementsByTagName('input')[i].value= S[i];
+                }
+                document.getElementsByTagName('input').disabled = 'disabled';
+            }
+            function feasible( x, y, k){
+                var i = 0, j = 0;
+                for(i = 0; i <9 ; i++){
+                    if(S[9*x+i] == k) return 0;
+                }
+                for(i = 0; i <9 ; i++){
+                        if(S[9*i+y] == k) return 0;
+                    }
+                var a = (x-x%3)/3, b = (y-y%3)/3;
+                for(i = 3*a; i < 3*a+3; i++){
+                    for(j = 3*b; j < 3*b+3; j++){
+                        if(S[9*i+j] == k) return 0;
+                    }
+                }
+                return 1;
+
+            }
+
+            function solve_sudoku(x, y){
+                if(y == 9){
+                    if(x == 8){
+                        printSolution();
+
+                    } else {
+                        solve_sudoku( x+1,0);
+                    }
+                }
+                else if(S[9*x+y] == 0){
+                    var k = 0;
+                    for (k = 1; k <=9; k++){
+                        if(feasible(x,y,k)){
+                            S[9*x+y] = k;
+                            solve_sudoku( x, y+1);
+                            S[9*x+y] = 0;
+                        }
+                    }
+                } else {
+                    solve_sudoku(x,y+1);
+                }
+            }
+            function run(){
+            /*	S =     [0,3,1,2,0,0,0,7,9,
+                        5,4,0,0,0,9,1,0,0,
+                        8,0,0,0,0,7,0,0,5,
+                        2,6,8,0,0,1,5,0,0,              // Test
+                        1,0,0,0,0,0,0,0,8,
+                        0,0,9,4,0,0,7,1,6,
+                        9,0,0,8,0,0,0,0,2,
+                        0,0,3,5,0,0,0,6,7,
+                        7,2,0,0,0,4,3,8,0];*/
+            var i;        
+                for ( i=0;i<81;i++)
+                    {S[i] = document.getElementsByTagName('input')[i].valueAsNumber;
+                    if (S[i] != S[i] || S[i]>9 || S[i]<0) S[i]=0;    
+                }
+                solve_sudoku(0,0);
+            }
+        </script>
+        <button class="button" onclick="run()">Solve</button><br />
+        <button class="button" onclick="alert('                             Hướng dẫn\nNhập vào: Chọn vào ô rồi nhập số hoặc dùng phím mũi tên lên và xuống\nÔ nào chưa biết thì nhập số 0 hoặc để trống\nNhững giá trị khác (0-9) đều được hiểu là ô trống\nSau khi nhập xong bấm Solve để giải')">Hướng dẫn</button>    
+        </center>
+        </div>
+    </body>
+</html>
