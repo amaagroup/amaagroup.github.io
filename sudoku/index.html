@@ -4,14 +4,18 @@
         <title>Sudoku</title>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/ico" href="/image/icon/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&amp;display=swap" rel="stylesheet">    
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <style>
             * {
                 margin: 0;
                 padding: 0;
-                font-family: monospace;
+                font-family:  'Montserrat',monospace;
             }
+
             input[type=number] {
                 border: 1px dotted #000;
                 height: 30px;
@@ -19,6 +23,42 @@
                 font-size: 20px;
                 text-align: center;
                 color: #0000dd;
+            }
+            #load {
+                width: 0%;
+                height: 5px;
+                background-color: red;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            
+            #hd{
+
+                background-color: rgb(92, 185, 64);
+                position: absolute;top: -300px;left: 30%;opacity: 0;box-shadow: 6px 6px 3px; padding: 15px 10px; width: 40%; font-size: 1.5rem;border-radius: 15px;border: 5px solid black;
+            }
+            @media only screen and (max-width: 850px){
+            #hd{
+                left: 8%;width: 76%; font-size: 1.4rem;
+            }
+            .edge {
+                display: none;
+            }
+            }
+            .edge{
+                background-color: rgb(92, 185, 64);
+                position: absolute;
+                top: 0px;
+                width: 200px;
+                height: 100vh;
+            }
+            .menu{
+                height: 30px;
+                width: 75%;
+            }
+            .menu:hover{
+                background-color: black;
             }
             .left {
                 border-left: 2px solid #000!important;
@@ -38,16 +78,15 @@
                 transition-duration: 0.4s;
                 background-color: #fff300;
                 font-size: 1em;
-                padding: 10px 15px;
+                font-family: 'Montserrat',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                padding: 8px 12px;
                 margin-top:30px;
                 border-radius: 10px;
                 color: black;
-                border: 3px solid #DC143C;
-                font-family: 'Montserrat', sans-serif;
+                border: 2px solid #DC143C;
                 font-weight:bold;
                 cursor: pointer;
             }
-
             .button:hover {
 
             -webkit-animation-play-state: paused;
@@ -58,97 +97,34 @@
             margin-top:30px;
             
             }
+            @keyframes load {
+                50%{width: 100%;}
+            }
+            @keyframes drop {
+                0,100% {top:-300px;opacity: 0;}
+                5% {top: 75px;opacity: 0.94;}
+                95%{top:75px;opacity: 0.94;}
+            }
         </style>
+        <div id="load"></div>
         <br />
         <p style="font-size: 40px;text-align: center;">SUDOKU</p><br /><br />
         <div id="table">
         <center>
         <p>
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
-            <input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9">
-            <input autocomplete="off" maxlength="1" class="bottom right" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+<input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom right" type="number" min="0" max="9"><br>
         </p>
         <script>
             var S=[];
-            var i,elemnt,d,start,kt;
+            var i,elemnt,d,start,kt,t;
             function tamdung(){
                 tamdung();
             }
@@ -158,6 +134,7 @@
                     elemnt.value = S[i];
                     elemnt.disabled = true;
                 }
+                
                 tamdung();
             }
             function feasible( x, y, k){
@@ -231,17 +208,36 @@
             }
 
         </script>
-        <button class="button" onclick="console.clear();run();">Solve</button><br />
-        <button class="button" onclick="document.getElementById('hd').style.display = 'block' ">Hướng dẫn</button>    
-        <button class="button" onclick="again()">Làm lại</button>
+        <button class="button" onclick="console.clear();document.getElementById('load').style.animation = 'load 0.4s 0s';run();">Solve</button><br />
+        <button class="button" onclick="document.getElementById('hd').style.animation = 'drop 15s 0s';t=setTimeout(function(){
+            document.getElementById('hd').style.animation = '';
+        }, 15100); ">Hướng dẫn</button>    
+        <button class="button" onclick="document.getElementById('load').style.animation = '';again()">Làm lại</button>
             </center>
-        <div id="hd" style="background-color: aqua; position: absolute;top: 105px;left: 30%; padding: 15px 10px; width: 40%;display: none; font-size: larger;">
-            <span class="hd" style="color: green;">&emsp;&emsp;&emsp; Hướng dẫn</span><br /><br />
-            <span class="hd"><li>Nhập vào: Chọn vào ô rồi nhập số hoặc dùng phím mũi tên lên và xuống</li></span><br /><br />
-            <span class="hd"><li>Ô nào chưa biết thì nhập số 0 hoặc để trống</li></span><br /><br />
-            <span class="hd"><li>Những giá trị khác (0-9) đều được hiểu là ô trống</li></span><br /><br />
+        <div id="hd">
+            <span class="hd" style="color: green;">&emsp;&emsp;&emsp; <b>Hướng dẫn</b></span><br />
+            <span class="hd"><li>Nhập vào: Chọn vào ô rồi nhập số hoặc dùng phím mũi tên lên và xuống</li></span><br />
+            <span class="hd"><li>Ô nào chưa biết thì nhập số 0 hoặc để trống</li></span><br />
+            <span class="hd"><li>Những giá trị khác (0-9) đều được hiểu là ô trống</li></span><br />
             <span class="hd"><li>Sau khi nhập xong bấm Solve để giải</li></span>
-            <div style="position: absolute; top: 4px;left: 95%;"><a style="color: red; cursor: pointer;" onclick="document.getElementById('hd').style.display = 'none' ">X</a></div>
+            <div style="position: absolute; top: 4px;right: 6px;"><a style="color: red; cursor: pointer;" onclick="document.getElementById('hd').style.animation = '' ;clearTimeout(t);">X</a></div>
         </div>
+        
+        <div id="leleft" class="edge" style="left: 0px;"><marquee style="margin-top: 100px; font-size: 40px;">Welcome</marquee><br />
+        <div style="margin-top: 100px;">
+            <div class="menu"><a href="/" style="text-decoration: none;color: honeydew;cursor: pointer;">&emsp; Trang chủ</a></div><br />
+            <div class="menu"><a href="#" style="text-decoration: none;color: honeydew;cursor: pointer; ">&emsp; Liên hệ</a></div><br />
+            <div class="menu"><a href="/typing-test/" style="text-decoration: none;color: honeydew;cursor: pointer;">&emsp; Typing-test</a></div><br />
+            <div class="menu"><a href="#" style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp; Sudoku</a></div>
+        </div>
+        </div>
+        <div id="leright" class="edge" style="right: 0px;"><center>
+            <div style="margin-top: 90vh;">
+            <a href="http://fb.com" target="_blank"><img src="/image/fb.png" alt="facebook" style="width: 30px;height:30px; margin-right:10px;"></a>
+            
+            <a href="http://gmail.com" target="_blank"><img src="/image/mail.png" alt="Mail" style="width: 30px;height:30px;margin-right:10px;"></a>
+            <a href="http://github.com/amaagroup" target="_blank"><img src="/image/github.png" alt="Github" style="width: 30px;height:30px;"></a>
+            </center></div>
+        </div>        
     </body>
 </html>
