@@ -24,6 +24,9 @@
                 text-align: center;
                 color: #0000dd;
             }
+            input:focus{
+               background-color: #fff222;
+            }
             #load {
                 width: 0%;
                 height: 5px;
@@ -36,7 +39,7 @@
             #hd{
 
                 background-color: rgb(92, 185, 64);
-                position: absolute;top: -300px;left: 30%;opacity: 0;box-shadow: 6px 6px 3px; padding: 15px 10px; width: 40%; font-size: 1.5rem;border-radius: 15px;border: 5px solid black;
+                position: absolute;top: -400px;left: 30%;opacity: 0;box-shadow: 6px 6px 3px; padding: 15px 10px; width: 40%; font-size: 1.5rem;border-radius: 15px;border: 5px solid black;
             }
             @media only screen and (max-width: 850px){
             #hd{
@@ -101,9 +104,9 @@
                 50%{width: 100%;}
             }
             @keyframes drop {
-                0,100% {top:-300px;opacity: 0;}
-                5% {top: 75px;opacity: 0.94;}
-                95%{top:75px;opacity: 0.94;}
+                0,100% {top: -400px; opacity: 0;}
+                5% { top: 75px; opacity: 0.94;}
+                95%{ top: 75px; opacity: 0.94;}
             }
         </style>
         <div id="load"></div>
@@ -223,22 +226,25 @@
             <div style="position: absolute; top: 4px;right: 6px;"><a style="color: red; cursor: pointer;" onclick="document.getElementById('hd').style.animation = '' ;clearTimeout(t);">X</a></div>
         </div>
         
-        <div id="leleft" class="edge" style="left: 0px;"><marquee style="margin-top: 100px; font-size: 40px;">Welcome</marquee><br />
-        <div style="margin-top: 80px;">
-            <div class="menu"><a href="/" style="text-decoration: none;color: honeydew;cursor: pointer;">&emsp; Trang chủ</a></div><br />
-            <div class="menu"><a href="#" style="text-decoration: none;color: honeydew;cursor: pointer; ">&emsp; Liên hệ</a></div><br />
-            <div class="menu"><a href="/typing-test/" style="text-decoration: none;color: honeydew;cursor: pointer;">&emsp; Typing-test</a></div><br />
-            <div class="menu"><a href="#" style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp; Sudoku</a></div><br />
-            <div class="menu"><a href="/win-lock-screen/" style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp; Windows 10</a></div>
+        <div id="leleft" class="edge" style="left: 0px;"><div style="position: absolute; top:20vh;"><marquee style="font-size: 40px;">Welcome</marquee></div><br />
+        <div style="position:absolute; top:40vh; width: 180px;">
+            <div class="menu"><a href="/" style="text-decoration: none;color: honeydew;cursor: pointer;">&emsp; Trang chủ&emsp;&emsp;&nbsp;</a></div><br />
+            <div class="menu"><a href="#" style="text-decoration: none;color: honeydew;cursor: pointer; ">&emsp; Liên hệ&emsp;&emsp;&emsp;&nbsp;</a></div><br />
+            <div class="menu"><a href="/typing-test/" style="text-decoration: none;color: honeydew;cursor: pointer;">&emsp; Typing-test&emsp;&nbsp;</a></div><br />
+            <div class="menu"><a href="/sudoku/" style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp; Sudoku&emsp;&emsp;&emsp;</a></div><br />
+            <div class="menu"><a href="/win-lock-screen/" style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp; Windows 10&emsp;&nbsp;</a></div>
         </div>
         </div>
-        <div id="leright" class="edge" style="right: 0px;"><center>
-            <div style="margin-top: 90vh;">
+        <div id="leright" class="edge" style="right:0px"><center>
+            <div style="margin-top:10px;"><iframe width="180" height="120" src="https://www.youtube.com/embed/3A1pMy2mBxU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            Hướng dẫn cách chơi Sudoku (Cơ bản)
+            <div style="position: absolute; top:90vh; left: 45px;">
             <a href="http://fb.com" target="_blank"><img src="/image/fb.png" alt="facebook" style="width: 30px;height:30px; margin-right:10px;"></a>
             
             <a href="http://gmail.com" target="_blank"><img src="/image/mail.png" alt="Mail" style="width: 30px;height:30px;margin-right:10px;"></a>
-            <a href="http://github.com/amaagroup" target="_blank"><img src="/image/github.png" alt="Github" style="width: 30px;height:30px;"></a>
-            </center></div>
-        </div>        
+            <a href="http://github.com/amaagroup" target="_blank"><img src="/image/github.png" alt="Github" style="width: 30px;height:30px;"></a></div>
+            </center>
+        </div>
+              
     </body>
 </html>
