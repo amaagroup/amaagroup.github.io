@@ -72,8 +72,9 @@ input.search-box{
     position: fixed;
     right: 0;
     top:64px;
+    bottom: 20px;
     width: 75%;
-    height: 100vh;
+    height: calc(100vh - 64px);
     background-color: #fafafa;
 }
 .box_chat{
@@ -116,11 +117,17 @@ input.draft
 .name{
     color:rgb(97, 74, 74);
     font: 1em sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-left: 65px;
     margin-top: -40px;
 }
 .mess{
     color:black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font: 0.8em sans-serif;
     font-family: sans-serif;
     margin-left: 65px;
@@ -144,7 +151,7 @@ input.draft
 } */
 
 .history {
-    max-height: calc(100% - 220px);
+    max-height: calc(100vh - 220px);
     overflow: auto;
 }
 
@@ -254,4 +261,15 @@ input.draft
     
     [aria-label]:hover:after {
     display: block;
+    }
+    @media only screen and (max-width: 950px){
+        .logo-container{display: none;}
+        @media only screen and (max-width: 520px)
+        {
+        .nav.nonchat{display: none;}
+        #scroll-list,#search{display: none;}
+        #chat{width: 100%;}
+        .box_chat{width: 100%;}
+        
+        }
     }
