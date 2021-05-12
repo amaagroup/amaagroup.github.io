@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Music Timer</title>
+	<link rel="stylesheet" href="main.css">
+	<body background="Resources\3.png" class="fixBackground">
+	<script type="text/javascript" src="app.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+	<audio class="Music" controls>
+		<source src="Resources\COOLIN_DUB'L U.mp3" type="audio/mpeg">
+	</audio>
+	<div id="playButton" class="button" onclick="po_lay();tapPlay()">
+		<svg height="300" width="300">
+			<polygon points="90,80.5 210,150 90,219.5" style="fill:white;stroke-width:0;" />
+		</svg>
+	</div>
+	<div id="musicListBox" class="musicListBox" style="display: none;">
+		<div id="musicList_page1" class="musicList" style="display:block;">
+			<div class="songinlist">
+				<p class="songName"> Song 1 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 2 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 3 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 4 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 5 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 6 </p>
+			</div>
+		</div>
+		<div id="musicList_page2" class="musicList" style="display:none;">
+			<div class="songinlist">
+				<p class="songName"> Song 7 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 8 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 9 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 10 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 11 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 12 </p>
+			</div>
+		</div>
+		<div id="musicList_page3" class="musicList" style="display:none;">
+			<div class="songinlist">
+				<p class="songName"> Song 13 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 14 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 15 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 16 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 17 </p>
+			</div>
+			<div class="songinlist">
+				<p class="songName"> Song 18 </p>
+			</div>
+		</div>
+		<div>
+			<div class="transiDot" style="left:40%;opacity:100%;"></div>
+			<div class="transiDot" style="left:50%;"></div>
+			<div class="transiDot" style="left:60%;"></div>
+		</div>
+	</div>
+	<div id="transi_right" class="transiButton" style="display: none;left: calc(50% + 250px);">
+		<svg id="right_arrow" height="50" width="50" class="button_page" onclick="left=false;transiPage()">
+			<polygon points="17,13 37,25 17,37"/>
+		</svg>
+	</div>
+	<div id="transi_left" class="transiButton" style="display: none;left: calc(50% - 250px);">
+		<svg id="left_arrow" height="50" width="50" class="button_page" onclick="left=true;transiPage(true)">
+			<polygon points="13,25 33,13 33,37"/>
+		</svg>
+	</div>
+</body>
+</html>
