@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
 }
-.fixBackground {
-	background-size: 100vw 100vh;
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;background-size: 100vw 100vh;
 }
-
 .button {
 	background-color: Transparent;
 	border: none;
@@ -25,7 +26,7 @@
 .Music {
 	opacity: 0.5;
 	position: absolute;
-	bottom: 35px;
+	bottom: 7px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -51,9 +52,6 @@
 	padding: 20px; 
 	width: 280px;
 	height: 380px;
-	/* position: absolute;
-	top: 50%;
-	left: 50%; */
 	transform: translateX(-5%);
 }
 
@@ -93,13 +91,13 @@
 	background-color: white;
 	opacity: 0.5;
 	border-radius: 50%;
-	display: inline-block;
 	position: absolute;
+	display: none;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	box-shadow: 5px 5px 10px;
-}
 
+}
 .button_page {
 	fill: black;
 	stroke-width: 0;
@@ -126,17 +124,17 @@
 	top: 93%;
 	transform: translate(-50%, -50%);
 	opacity: 60%;
+	cursor: pointer;
 }
 
 @keyframes swipeR {
     0,100%{
-        transform: translateX(-5%) ;
+        transform: translateX(-5%) ;opacity: 1;
     }
-    50%{ transform: translateX(-85%) ;}
+    50%{ transform: translateX(-85%) ;opacity: 0.4;}
 }
 @keyframes swipeL {
     0,100%{
-        transform: translateX(-5%) ;
+        transform: translateX(-5%) ;opacity: 1;
     }
-    50%{ transform: translateX(75%) ;} 
-}
+    50%{ transform: translateX(85%) ;opacity: 0.4;} 

@@ -80,18 +80,18 @@
 			</div>
 		</div>
 		<div>
-			<div class="transiDot" style="left:40%;opacity:100%;"></div>
-			<div class="transiDot" style="left:50%;"></div>
-			<div class="transiDot" style="left:60%;"></div>
+			<div class="transiDot" style="left:40%;opacity:100%;" onclick="MoveToPage(0)"></div>
+			<div class="transiDot" style="left:50%;" onclick="MoveToPage(1)"></div>
+			<div class="transiDot" style="left:60%;" onclick="MoveToPage(2)"></div>
 		</div>
 	</div>
-	<div id="transi_right" class="transiButton" style="display: none;left: calc(50% + 250px);">
+	<div id="transi_right" class="transiButton" style="left: calc(50% + 250px);">
 		<svg id="right_arrow" height="50" width="50" class="button_page" onclick="left=false;transiPage()">
 			<polygon points="17,13 37,25 17,37"/>
 		</svg>
 	</div>
-	<div id="transi_left" class="transiButton" style="display: none;left: calc(50% - 250px);">
-		<svg id="left_arrow" height="50" width="50" class="button_page" onclick="left=true;transiPage(true)">
+	<div id="transi_left" class="transiButton" style="left: calc(50% - 250px);">
+		<svg id="left_arrow" height="50" width="50" class="button_page" onclick="left=true;transiPage()">
 			<polygon points="13,25 33,13 33,37"/>
 		</svg>
 	</div>

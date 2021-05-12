@@ -7,8 +7,6 @@ var i;
 var dots = document.getElementsByClassName("transiDot");
 var lists = document.getElementsByClassName("musicList");
 
-
-
 function po_lay() {
     var music = document.getElementsByTagName('audio')[0] ;
     music.play();
@@ -25,8 +23,9 @@ function tapPlay() {
     
 	btn.style.display = "none";
 	msl.style.display = "block";
-	tbl.style.display = "block";
-	tbr.style.display = "block";
+	if (innerWidth>=630) {
+    tbl.style.display = "block";
+	tbr.style.display = "block";}
 }
 
 function transiPage() {
@@ -45,4 +44,12 @@ function transiPage() {
         dots[current].style.opacity= '1.0';
         if (left) lists[current].style='display: block; animation: swipeL 0.6s 0.2s 1';
         else lists[current].style='display: block; animation: swipeR 0.6s 0.2s 1';
+}
+function MoveToPage(n){
+    if (current!=n)
+    { 
+        current= (n + lists.length - 1) % lists.length;
+        left=false;
+        transiPage();
+    }
 }
