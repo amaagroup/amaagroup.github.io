@@ -5,7 +5,10 @@
 body{
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;background-size: 100vw 100vh;
+	overflow: hidden;
+	background-image: url('./Resources/3.png');
+	background-size: 100vw 100vh;
+	
 }
 .button {
 	background-color: Transparent;
@@ -17,7 +20,76 @@ body{
 	transform: translate(-50%, -50%);
 	transition: transform .2s;
 }
-
+.player{
+	width: 320px;
+	height: 75px;
+	border-radius: 5px;
+	background-color: #d38ebc;
+	box-shadow: 6px 6px 3px #6f4e84;
+	position: absolute;
+	display: inline-flex;
+	bottom: 15px;
+	left: calc(50% - 160px);
+}
+.control{
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	position: relative;
+	border: 2px grey;
+	background-color: chartreuse;
+	margin: 10px 0 0 10px;
+	float: left;
+	cursor: pointer;
+}
+.volume{
+	width: 25px;
+	height: 25px;
+	border-radius: 5px;
+	position: relative;
+	border: 2px grey;
+	background-color: #8060c6;
+	margin: 25px 0 0 10px;
+	cursor: pointer;
+}
+.slider{
+	width: 125px;
+	height: 14px;
+	border-radius: 5px;
+	position: relative;
+	border: 2px grey;
+	background-color: #614785;
+	margin: 30px 0 0 6px;
+	cursor: default;
+}
+.dot{
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: black;
+	margin-top: -1px;
+	position: absolute;
+	left: calc(50% - 65px);
+	cursor: pointer;
+}
+.timer{
+	width: 75px;
+	height: 25px;
+	border-radius: 5px;
+	position: relative;
+	border: 2px grey;
+	background-color: #8060c6;
+	float: right;
+	margin: 25px 0 0 6px;
+	cursor: default;
+}
+#timer{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 0.875rem;
+	line-height: 25px;
+	font-weight: bold;
+}
 .button:hover {
 	transform: scale(1.2) translate(-41%, -41%);
 	cursor: pointer;
