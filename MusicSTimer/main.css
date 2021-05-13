@@ -90,6 +90,30 @@ body{
 	line-height: 25px;
 	font-weight: bold;
 }
+.volume_bar{
+	width: 210px;
+	height: 20px;
+	background-color: #fffaaa;
+	position: absolute;
+	top:35px;
+	left: calc(50% - 105px);
+	opacity: 0;
+	display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.progress{
+	position: absolute;
+	left: calc(50% - 100px);
+    height: 14px;
+    width: 100px;
+    background: lime;
+}
+.volume_bar:hover{
+	opacity: 1;
+}
+
 .button:hover {
 	transform: scale(1.2) translate(-41%, -41%);
 	cursor: pointer;

@@ -15,7 +15,7 @@ function timer(){
     var total = Math.floor(music.duration);
     var now = Math.floor(music.currentTime);
     var dot= document.getElementById('d');
-    var a=60-(now/total)*105;
+    var a=63-(now/total)*115;
 
     var mm,ss,mmm,sss;
     mm=Math.floor(now/60);
@@ -30,8 +30,8 @@ function mute()
 {
     var music = document.getElementsByTagName('audio')[0] ;
     var mute=document.getElementById('mute');
-    if (music.volume) {music.volume = 0;mute.style.backgroundColor= 'red';}
-    else {music.volume=1;mute.style.backgroundColor= '#8060c6';}
+    if (!music.muted) {music.muted = true;mute.style.backgroundColor= 'red';}
+    else {music.muted=false; mute.style.backgroundColor= '#8060c6';}
 
 }
 function po_lay(){
@@ -54,6 +54,16 @@ function ChonBai(n){
     po_lay();
 }
 
+function Tua(x)
+{
+    console.log(x);
+    var music = document.getElementsByTagName('audio')[0];
+    var start = innerWidth*0.5 - 60;
+    var progess = Math.floor((x - start)/125  * music.duration);
+    music.currentTime = progess;
+    timer();
+
+}
 function tapPlay() {
 
 	var btn = document.getElementById('playButton');
