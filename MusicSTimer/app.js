@@ -56,7 +56,6 @@ function ChonBai(n){
 
 function Tua(x)
 {
-    console.log(x);
     var music = document.getElementsByTagName('audio')[0];
     var start = innerWidth*0.5 - 60;
     var progess = Math.floor((x - start)/125  * music.duration);
@@ -64,6 +63,11 @@ function Tua(x)
     timer();
 
 }
+/////////////////////////////////////////////////////////////////////////////////////////////////// 
+// 
+// 
+// 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 function tapPlay() {
 
 	var btn = document.getElementById('playButton');
