@@ -6,11 +6,13 @@
 	<link rel="stylesheet" href="./main.css">
 	<link rel="stylesheet" href="./player.css">
 	<link rel="icon" type="image/ico" href="./favicon.ico">
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./app.js"></script>
+	<script type="text/javascript" src="./player.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">	
 </head>
 <body>
-	<audio class="Music" controls onended="po_lay()">
+	<audio class="Music" controls preload="metadata" onended="po_lay()">
 		<source id="songWillPlay" src="./Resources/COOLIN_DUB'L U.mp3" type="audio/mpeg">
 	</audio>
 
@@ -118,6 +120,6 @@
 			<p id="timer">-:--/-:--</p>
 		</div>
 	</div>
-	<div class="volume_bar" id="volume_bar"><div class="progress" id="volume"></div></div>
+	<div class="volume_bar" id="volume_bar" onmousedown="ChangeVolume(event.clientX)" onmouseover="Wait(true)" onmouseout="Wait(false)"><div class="progress" id="volume"></div><div class="percent"><p id="v">100</p></div></div>
 </body>
 </html>
