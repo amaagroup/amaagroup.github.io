@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html><head>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="./script.js"></script>
 <title id="tit">Trang chủ</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
 <link rel="shortcut icon" type="image/png" href="/image/favicon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&amp;family=Noto+Sans+JP&amp;display=swap" rel="stylesheet">
@@ -13,9 +14,7 @@
 
 <!--h1>Tập đoàn công nghệ AMAA</h1-->
 <div id="menu">
-
   <ul>
-  <!--img src="/image/circle_logo.png" alt="AMAA" style="width: 30px;height:30px; margin-left:25px;margin-top:7px; margin-right:150px;"-->
     <li><a href="https://amaagroup.github.io/">Trang chủ</a></li>
     <li><a href="#">Liên hệ</a></li>
     <li><a href="#">Đầu tư</a>
@@ -33,6 +32,7 @@
 	</li>
   </ul>
 </div>
+
 <script>
 var invest=false;
 function scrollFunction() {
@@ -53,10 +53,6 @@ function contact(){
 window.onscroll = scrollFunction;
 </script>
 <div id="part1" style=" height: 735px;">
-	<!--div id="ileft">
-	<img src="/image/circle_logo.png" alt="AMAA">
-	</div>
-	<button onclick="f1()">Go!</button-->
 <div id="namecty" style="text-align:center; font-size: 25vw;
   -webkit-animation-name: welcome;
   -webkit-animation-duration: 3s; 
@@ -71,23 +67,18 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 
 </div>
 <div id="part2">
-<!--div id="ileft">
-<img src="/image/cht.png" alt="CHT">
-</div-->
 <span>
 <p  style="font-family: 'Montserrat', sans-serif; margin-left: 20%; margin-top: 0px; margin-right: 15%; height: 150px;">
 <br><br><br>
-2. T1K27 CHT - Toán 1 khóa 27 trường THPT chuyên Hà Tĩnh</p>
+2. Giới thiệu </p>
 
-<a style="font-weight:bolder; font-size:1.5em;font-family: 'Montserrat', sans-serif; margin-left: 45%; margin-top: 0px; margin-right: 15%; height: 150px;"> Giới thiệu</a>
+<p style="font-weight:bolder; font-size:1.5em;font-family: 'Montserrat', sans-serif; margin-top: 0px; height: 75px;text-align: center;"> Giới thiệu</p>
 </span>
 <br><br>
 <center>
-<div style="font-family:'Montserrat',sen-serif;
-    display: inline-flex;
-">
+<div id="info_container" class="gioithieu" >
 
-<div id="chu-tich" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 15px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white;">
+<div id="chu-tich" class="info" >
 <span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Chủ tịch:</span></span><br>
 <span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
 <span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
@@ -97,7 +88,7 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 <button class="button" onclick="contact()">Liên hệ</button>
 </div>
 
-<div id="pho-chu-tich" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 5px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white;">
+<div id="pho-chu-tich" class="info">
 <span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Phó chủ tịch:</span></span><br>
 <span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
 <span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
@@ -107,7 +98,7 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 <button class="button" onclick="contact()">Liên hệ</button>
 </div>
 
-<div id="bao-ve" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 5px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white; cursor:not-allowed;">
+<div id="bao-ve" class="info" style="cursor: not-allowed;">
 <span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Bảo vệ:</span></span><br>
 <span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
 <span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
@@ -138,7 +129,7 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 <circle cx="315" cy="32" r="8" fill="red" stroke-width="7"/>
 <text fill="#ffffff" font-size="15" font-family="Verdana" x="305" y="70">y=f(x)</text>
 </svg-->
-<img src="/image/invest.gif" width="25%"/>
+<img id="dautu" src="/image/invest.gif" />
 </center>
 <center><button id="but1" class="button" onclick="alert('Bạn đã đầu tư thành công! Xin chúc mừng!');invest=true;">Đầu tư</button></center>
 </div>
@@ -149,15 +140,14 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 <!--div id="iright">
 <img src="/image/Logo_Hust.png" alt="HUST">
 </div-->
-<p style="font-family: 'Montserrat', sans-serif; color:#fff300; margin-left: 10%; margin-top: 0px; margin-right: 20%; height:150px;">
+<p style="font-family: 'Montserrat', sans-serif; color:#fff300; margin-left: 10%; margin-top: 0px; margin-right: 20%; height:100px;">
 <br><br><br>
 4. HUST - Ha Noi University of Sience and Technology
 </p>
-
 <center><div class="card_container">
-		<div class="card"><img src="/image/card.png" width="60%" /></div>
-		<div class="card"><img src="/image/card2.png" width="60%" /></div>
-		<div class="card"><img src="/image/card3.png" width="60%" /></div>
+		<div class="card"><img src="/image/card.png" width="760px" /></div>
+		<div class="card"><img src="/image/card2.png" width="760px" /></div>
+		<div class="card"><img src="/image/card3.png" width="760px" /></div>
 	</div>
 <div style="text-align:center; color:gray;">
         <span class="dot" onclick="currentSlide(0)" style="font-size:85px; cursor:pointer;">.</span> 
@@ -188,7 +178,6 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
           if (slideIndex > slides.length - 1) {
             slideIndex = 0
           }    
-		  console.log('slide '+ slideIndex);
           //tự động chuyển đổi slide sau 5s
           t = setTimeout(showSlides, 5000);
       }
@@ -207,44 +196,43 @@ Chào mừng đến với Website của AMAA. Hiện tại trang web đang ở p
 </div>
  
 <div id="part5">
-<!--div id="ileft">
-<img src="/image/logo.png" alt="AMAA">
-</div-->
-<p style="font-family: 'Montserrat', sans-serif; margin-left: 20%; margin-top: 0px; margin-right: 15%; height: 800px;">
+	<p style="font-family: 'Montserrat', sans-serif; margin-left: 20%; margin-top: 0px; margin-right: 15%; height: 800px;">
 <br><br><br>
 5. Hmm.................................................
 </p>
+
 </div>
 
 <div id="botpage">
 <br><br><br>
-<!--center style = "font-family:Poppins,sans-serif; font-size: 30px; font-weight: bolder;">Tập đoàn công nghệ AMAA - AMAA Group</center-->
 <br><br><br>
-<div id="bottext">
-<p style="font-family: 'Montserrat', sans-serif; font-size: 0.875rem; width: 33%; height: 200px; color: #fffabc;" class="font-size-sm text-white opacity-70 pb-1">
-Trang web này đang trong quá trình hoàn thiện. Nội dung ở đây sẽ được bổ sung sau.
-</p>
+<div>
+<div id="bottext" class="foot">
+	<p style="font-family: 'Montserrat', sans-serif; font-size: 0.875rem; width: 66%; margin-left: 8%; height: 200px; color: #fffabc;" class="font-size-sm text-white opacity-70 pb-1">
+	Trang web này đang trong quá trình hoàn thiện. Nội dung ở đây sẽ được bổ sung sau.
+	</p></div>
+  <div id="location" class="foot">
+  <p style="font-family: 'Montserrat', sans-serif; font-size: 0.875rem; width: 66%; margin-right: 8%; height: 200px; color: #fffabc;" class="font-size-sm text-white opacity-70 pb-1">
+    Địa chỉ: Việt Nam
+  </p></div>
 </div>
 <div id="bmenu">
-<img id="imenu" class="icmenu" src="/image/menu.png" style="height:40px;" alt="bmenu" onmouseover="this.src='/image/menuhover.png'" onmouseout="this.src='/image/menu.png'" onclick="bmenu()">
+	<img id="imenu" class="icmenu" src="/image/menu.png" style="height:40px;" alt="bmenu" onmouseover="this.src='/image/menuhover.png'" onmouseout="this.src='/image/menu.png'" onclick="bmenu()">
 <div id="sub-bmenu" style="cursor: pointer; display: none;"><ul>
-<li><a href="#"> Đăng nhập</a></li>
-    <li><a href="#"> Đăng kí</a></li>
-    <!--li><a href="#"> Đầu tư</a></li>
-	<li><a href="#"> G.Thiệu</a></li-->
-	</ul></div>
+	<li><a href="/typing-test/"> Typing</a></li>
+    <li><a href="/sudoku/"> Sudoku</a></li>
+	</ul>
+</div>
 </div>
 
 <center>
-
 <br><br>
-<a href="http://fb.com" target="_blank"><img src="/image/fb.png" alt="facebook" style="width: 30px;height:30px; margin-right:10px;"></a>
-
-<a href="http://gmail.com" target="_blank"><img src="/image/mail.png" alt="Mail" style="width: 30px;height:30px;margin-right:10px;"></a>
-<a href="http://github.com" target="_blank"><img src="/image/github.png" alt="Github" style="width: 30px;height:30px;"></a>
+	<a href="http://fb.com" target="_blank"><img src="/image/fb.png" alt="facebook" style="width: 30px;height:30px; margin-right:10px;"></a>
+	<a href="http://gmail.com" target="_blank"><img src="/image/mail.png" alt="Mail" style="width: 30px;height:30px;margin-right:10px;"></a>
+	<a href="http://github.com" target="_blank"><img src="/image/github.png" alt="Github" style="width: 30px;height:30px;"></a>
 </center>
 <br>
-<center style="font-family: 'Noto Sans JP', sans-serif; font-size: 10px;">&copy Designed by AMAA</center>
+	<center style="font-family: 'Noto Sans JP', sans-serif; font-size: 10px;">&copy Designed by AMAA</center>
 <br>
 </div>
 

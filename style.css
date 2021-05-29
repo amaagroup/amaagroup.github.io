@@ -19,7 +19,8 @@ ul { list-style-type: none; }
   
   list-style-type: none;
   text-align: center;
-  background: linear-gradient(45deg, #000000, #29aecf, #0e478c, #000a84);
+  /* background: linear-gradient(45deg, #000000, #29aecf, #0e478c, #000a84); */
+  background: black;
   background-size: 400% 400%;
   animation: gradient 8s ease infinite;
 }
@@ -47,6 +48,14 @@ ul { list-style-type: none; }
 #menu ul li a:hover {
    background: #f1f1f1;
    color: #333;
+}
+.musicPlayer{
+  width:100%;
+  height: 70px;
+  position: fixed;
+  bottom:0px;
+  background-color: aqua;
+  z-index: 999;
 }
 .sub-menu li {
   display: none;
@@ -90,7 +99,9 @@ h1 {
 100%  {height:40vh;}
 }
 #but1 {
+	font-size:1.25em;
 	position:relative;
+	padding: 1% 2%;
 }
 #botpage {
 	background-color: #373737;
@@ -115,12 +126,12 @@ h1 {
 	   
 	   height:150px;
 }
+.foot{
+  width: 50%;
+  display: inline-flex;
+}
 #bottext {
 		position: relative;
-
-}
-#bottext p{
-	margin-left: 8%;
 }
 #bmenu {
        position: fixed;
@@ -151,8 +162,8 @@ h1 {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     background-color: #fff300;
-	font-size: 20px;
-	padding: 14px 40px;
+	font-size: 1em;
+	padding: 3% 6%;
 	margin-top:100px;
 	border-radius: 15px;
 	color: black;
@@ -168,11 +179,21 @@ h1 {
   animation-play-state: paused;
   background-color: crimson;
   color: white;
-  padding: 18px 45px;
+
   margin-top:96px;
   
 }
-
+@keyframes fly{
+	50% {top:300px;right:300px;}
+}
+.icmenu img{
+	animation-name:fly;
+	animation-duration:8s;
+	animation-iteration-count:4;
+}
+.icmenu:hover{
+  cursor: pointer;
+}
 #part3 {
 	background: linear-gradient(45deg, #000000, #18768d, #06203f, #000539);
     background-size: 400% 400%;
@@ -182,6 +203,7 @@ h1 {
 	background: linear-gradient(45deg, #000000, #29aecf, #092e5b, #000757);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
+    height: 150vh;
 }
 #part2 {
 	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
@@ -194,5 +216,42 @@ h1 {
     animation: gradient 8s ease infinite;
 }
 .active, .dot:hover {
-	color:black;
+	color:lime;
+	transition-duration: 0.5s;
+}
+@keyframes shadow {
+	50% {box-shadow:7px 7px 5px;}
+}
+.card img{
+	box-shadow:-5px -5px 3px;
+	animation-name: shadow;
+	animation-duration:5s;
+	animation-iteration-count:infinite;
+}
+.gioithieu{
+  font-family:'Montserrat',sen-serif;
+  display: inline-flex;
+}
+.info{
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 5px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white;
+}
+#dautu{
+  width:25%;
+}
+
+@media only screen and (max-width:1000px){
+  .card img{
+    width: 70%;
+  }
+  
+  .gioithieu {
+    display: block;
+  }
+  
+  .info {
+    width: 300px;
+  }
+  #dautu {
+    width: 45%;
+  }
 }
