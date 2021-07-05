@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Page Not Found</title>
+	<link rel="icon" type="image/ico" href="">
+	<link rel="stylesheet" href="">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&amp;display=swap" rel="stylesheet">    
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body id="body">
+<style type="text/css" media="screen">
+*{
+	padding: 0;
+	margin: 0;	
+}
+h1,p,#back{
+	text-align: center;
+	font-family: 'Monrserrat';
+}
+h1{
+	color: red;
+	font-size: 5rem;	
+}
+p,#back{
+	font-size: 2rem;
+}
+a{
+	text-decoration: none;
+	color:#ffdd9c;
+}
+#back{
+	padding: 1rem;
+	width: 20rem;
+	height: 3rem;
+	background: white;
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	display: grid;
+	align-items: center;
+	border-radius: 5px;
+	border: 2px black solid;
+	transition: 0.25s;
+}
+#back:hover{
+	background: #551a8b;
+	color: #ffdd9c;
+	font-size: 2.5rem;
+	transition: 0.25s;
+}
+#p404{
+	width: auto;
+	height: 100vh;
+	background: #ffdd9c;
+	display: grid;
+	align-items: center;
+	overflow: hidden;
+}
+</style>
+	<div id="p404">
+		<h1>404</h1>
+		<p>Page not found</p>
+		<div id="back"><a href="/">Back to home</a></div>
+	</div>
+</body>
+</html>

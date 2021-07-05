@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hello</title>
+	<link rel="icon" type="image/ico" href="./favicon.ico">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&amp;display=swap" rel="stylesheet">    
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+	<div class="count" id="clic" style="display:none" onmousedown="return false">
+		<span>Your score:&nbsp</span><span id="count">0</span>
+	</div>
+	<button class="buttons side" onclick="a()" id="firstbut"><p>HELLO</p></button>
+	<button class="buttons side" onclick="run()"><p>START</p></button>
+	<button class="buttons side" onclick="h()"><p>HELP</p></button>
+	<button class="buttons side" onclick="s()"><p>SOUND</p></button>
+	<button class="buttons side" onclick="q()"><p>RELOAD</p></button>
+	<div class="panel" id="panel" style="display:none">
+		<div><h1 id="title">Help</h1>
+		<a>This is some help for this website.</a>
+		<br><br>
+		<ul>
+		<li>Click button&nbsp<span>Hello</span>&nbspto hide top panel</li>
+		<li>Click button&nbsp<span>Help</span>&nbspfor help</li>
+		<li>Click button&nbsp<span>Sound</span>&nbspto change sound settings</li>
+		<li>Click button&nbsp<span>Reload</span>&nbspto reload</li>
+		<li>Click button&nbsp<span>Start</span>&nbspto start the game</li>
+		<li>Move mouse to&nbsp<b>left</b>&nbspor&nbsp<b>right</b>&nbspto control the rocket</li>
+		</ul>
+		</div>
+		<div id="setting" style="display:none">
+			<h1>Settings</h1>
+			<button class="buttons set" onclick="music()">Music</button>
+			<button class="buttons set" onclick="sound()">Sound</button>
+		</div>
+	</div>
+	<div id="zone" style="display:none">
+		
+	</div>
+</body>
+</html>
