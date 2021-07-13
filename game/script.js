@@ -15,7 +15,7 @@ function run() {
 	showing = true;
 	if (window.innerHeight < screen.height)
 		document.body.requestFullscreen();
-	$(window).on("blur focus", function (e) {
+	/*$(window).on("blur focus", function (e) {
 		var prevType = $(this).data("prevType");
 
 		if (prevType != e.type) {
@@ -32,7 +32,7 @@ function run() {
 			}
 		}
 		$(this).data("prevType", e.type);
-	})
+	})*/
 	$('.side').delay(100).hide(200);
 	$('.panel').delay(100).hide(200);
 	help = false;
