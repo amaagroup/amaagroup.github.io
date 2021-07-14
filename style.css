@@ -1,257 +1,54 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box;
+.nav_container.active ~ .content{
+	width: calc(100% - 240px);
+	left: 240px;
 }
-body {
-  background: linear-gradient(-45deg, #2be814, #29aecf, #2977d6, #05c351);
-  background-size: 100% 100%;
-  animation: gradient 8s ease infinite;
-}
-body hr{
-	width:100%;
-}
-ul { list-style-type: none; }
-#menu{
-	width:100%;
-}
-#menu ul {
-  
-  list-style-type: none;
-  text-align: center;
-  /* background: linear-gradient(45deg, #000000, #29aecf, #0e478c, #000a84); */
-  background: black;
-  background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
-}
-#menu li {
-  color: #f1f1f1;
-  display: inline-block;
-  width: 150px;
-  height: 55px;
-  line-height: 40px;
 
-  text-align: center;
+.content{
+	width: calc(100% - 78px);
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 78px;
+	z-index: -1;
+	transition: all 400ms ease;
 }
-#menu ul li a {
-  color: #f1f1f1;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 19px;
-  text-decoration: none;
-  display: inline-block;
-  width: 150px;
-  height: 50px;
-  line-height: 40px;
+/*****************************************************************************/
 
-  margin-top: 8px;
+
+
+.content .hello{
+	width: 100%;
+	height: 100%;
+	background: var(--bluelight);
 }
-#menu ul li a:hover {
-   background: #f1f1f1;
-   color: #333;
+.content .hello .amaa{
+	width: 100%;
+	height: 15rem;
 }
-.musicPlayer{
-  width:100%;
-  height: 70px;
-  position: fixed;
-  bottom:0px;
-  background-color: aqua;
-  z-index: 999;
+.content .hello .amaa div{
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	color: var(--blackmore);
+	font-size: 8em;
+	text-shadow: 6px 3px var(--bluedark);
+	user-select: none;
 }
-.sub-menu li {
-  display: none;
-}
-.Menu {
+.content .hello .amaa p{
+	font-size: 1rem;
 	text-align: center;
 }
-#menu li {
-  position: relative;
-}
-.sub-menu {
- display: none;
- position: absolute;
-}
-#menu li:hover .sub-menu {
- display: block;
-}
-.sub-menu li {
- margin-left: 0;
-}
-h1 {
-	font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-.classname {
-	-webkit-animation-name: welcome;
-  -webkit-animation-duration: 3s; 
-  -webkit-animation-iteration-count: 2;
-  animation-name: welcome;
-  animation-duration: 3s;
-  animation-iteration-count: 2;
-}
-@keyframes welcome {
-0% {font-size:25vw;}
-50%   {font-size:19vw;}
-100%  {font-size:25vw;}
-}
-@keyframes invest {
-0% {height:40vh;}
-50%   {height:32vh;}
-100%  {height:40vh;}
-}
-#but1 {
-	font-size:1.25em;
-	position:relative;
-	padding: 1% 2%;
-}
-#botpage {
-	background-color: #373737;
-}
-#iright {
-       position: relative;
-}
-#iright img {
-       position: absolute;
-	   top: 80px;
-       right: 10%;
-	   
-	   height:150px;
-}
-#ileft {
-       position: relative;
-}
-#ileft img {
-       position: absolute;
-	   top: 80px;
-       left: 8%;
-	   
-	   height:150px;
-}
-.foot{
-  width: 50%;
-  display: inline-flex;
-}
-#bottext {
-		position: relative;
-}
-#bmenu {
-       position: fixed;
-	   color:#ff0000;
-       right: 0px;
-	   top:10px;
-	   height:120px;
-	   width:80px;
-}
-#bmenu ul li a{
-	color: #ffffff;
-	font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-	font-weight:bold;
-    text-decoration: none;
-	text-align:center;
-    line-height: 30px;
-}
-#sub-bmenu {
-	display:none;
-}
-#bmenu ul li a:hover {
-   background: #f1f1f1;
-   color: #333;
-   height:50px;
-}
-.button {
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    background-color: #fff300;
-	font-size: 1em;
-	padding: 3% 6%;
-	margin-top:100px;
-	border-radius: 15px;
-	color: black;
-	border: 3px solid #DC143C;
-	font-family: 'Montserrat', sans-serif;
-	font-weight:bold;
-	cursor: pointer;
-}
 
-.button:hover {
 
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-  background-color: crimson;
-  color: white;
 
-  margin-top:96px;
-  
-}
-@keyframes fly{
-	50% {top:300px;right:300px;}
-}
-.icmenu img{
-	animation-name:fly;
-	animation-duration:8s;
-	animation-iteration-count:4;
-}
-.icmenu:hover{
-  cursor: pointer;
-}
-#part3 {
-	background: linear-gradient(45deg, #000000, #18768d, #06203f, #000539);
-    background-size: 400% 400%;
-    animation: gradient 8s ease infinite;
-}
-#part4 {
-	background: linear-gradient(45deg, #000000, #29aecf, #092e5b, #000757);
-    background-size: 400% 400%;
-    animation: gradient 8s ease infinite;
-    height: 150vh;
-}
-#part2 {
-	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
-    background-size: 400% 400%;
-    animation: gradient 8s ease infinite;
-}
-#part5 {
-	background: linear-gradient(-45deg, #5eff4b, #89e8ff, #5da6ff, #00ff66);
-    background-size: 200% 200%;
-    animation: gradient 8s ease infinite;
-}
-.active, .dot:hover {
-	color:lime;
-	transition-duration: 0.5s;
-}
-@keyframes shadow {
-	50% {box-shadow:7px 7px 5px;}
-}
-.card img{
-	box-shadow:-5px -5px 3px;
-	animation-name: shadow;
-	animation-duration:5s;
-	animation-iteration-count:infinite;
-}
-.gioithieu{
-  font-family:'Montserrat',sen-serif;
-  display: inline-flex;
-}
-.info{
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;margin: 10px 5px 10px 5px;padding: 20px;line-height: 1.6em;padding: 15px;width: 26vw;background-color:white;
-}
-#dautu{
-  width:25%;
-}
-
-@media only screen and (max-width:1000px){
-  .card img{
-    width: 70%;
-  }
-  
-  .gioithieu {
-    display: block;
-  }
-  
-  .info {
-    width: 300px;
-  }
-  #dautu {
-    width: 45%;
-  }
+/*******************************************************************************/
+@media only screen and (max-width:500px){
+	.nav_container{
+		display: none;
+	}
+	.content{
+		width: 100%;
+		left: 0;
+	}
 }

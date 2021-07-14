@@ -1,239 +1,100 @@
 <!DOCTYPE html>
-<html><head>
-<script type="text/javascript" src="./script.js"></script>
-<title id="tit">Trang chủ</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
-<link rel="shortcut icon" type="image/png" href="/image/favicon.png">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&amp;family=Noto+Sans+JP&amp;display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<!--link rel="icon" type="image/ico" href="./favicon.ico"-->
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="./nav.css">  
+	<link rel="stylesheet" href="./style.css">   
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!--script type="text/javascript" src="./script.js"></script-->
 </head>
 <body>
-
-<!--h1>Tập đoàn công nghệ AMAA</h1-->
-<div id="menu">
-  <ul>
-    <li><a href="https://amaagroup.github.io/">Trang chủ</a></li>
-    <li><a href="#">Liên hệ</a></li>
-    <li><a href="#">Đầu tư</a>
-		<ul class="sub-menu">
-        <li><a style="cursor: not-allowed;">Mua cổ phiếu</a></li>
-        <li><a href="#">Ví điện tử</a></li>
-      </ul>
-	 </li>
-	<li><a href="#">Giới thiệu</a>
-	    <ul class="sub-menu">
-        <li><a href="#">Chủ tịch</a></li>
-        <li><a href="#">Phó chủ tịch</a></li>
-        <li><a style="cursor: not-allowed;">Bảo vệ</a></li>
-      </ul>
-	</li>
-  </ul>
-</div>
-
-<script>
-var invest=false;
-function scrollFunction() {
-	
-    document.getElementById('sub-bmenu').style.display = "none";
-	document.getElementById('imenu').src="/image/menu.png";
-	sta=true;
-}
-function zo(){
-document.getElementById('zo').className ='classname';
-document.getElementById('zo').style =" font-family: 'Montserrat', sans-serif;font-weight:bold; color:white; margin-top:300px;cursor:default;text-shadow: 6px 3px #000000;";
-}
-function contact(){
-	if (invest) {alert('Đang liên hệ...');
-	alert('https://play.google.com/store/apps/details?id=com.suiarts.DenturesAndDemons2');}
-	if (!invest) {alert('Đầu tư ngay để liên hệ!');alert('Đầu tư ở dưới kia.');}
-}
-window.onscroll = scrollFunction;
-</script>
-<div id="part1" style=" height: 735px;">
-<div id="namecty" style="text-align:center; font-size: 25vw;
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: 3s; 
-  -webkit-animation-iteration-count: 1;
-  animation-name: welcome;
-  animation-duration: 3s;
-  animation-iteration-count: 1;">
-<a id="zo" onclick="zo()" style="font-family: 'Montserrat', sans-serif;font-weight:bold; color:white; margin-top:300px; cursor: pointer;text-shadow: 6px 3px #000000;">AMAA</a></div>
-<p id="t1" style="font-family: 'Montserrat', sans-serif; text-align: center;">
-Chào mừng đến với Website của AMAA.
-</p>
-
-</div>
-<div id="part2">
-<span>
-<p  style="font-family: 'Montserrat', sans-serif; margin-left: 20%; margin-top: 0px; margin-right: 15%; height: 150px;">
-<br><br><br>
-2. Giới thiệu </p>
-
-<p style="font-weight:bolder; font-size:1.5em;font-family: 'Montserrat', sans-serif; margin-top: 0px; height: 75px;text-align: center;"> Giới thiệu</p>
-</span>
-<br><br>
-<center>
-<div id="info_container" class="gioithieu" >
-
-<div id="chu-tich" class="info" >
-<span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Chủ tịch:</span></span><br>
-<span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Giới thiệu: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Tham gia từ: Năm 2020</span>
-<br><br><br>
-<button class="button" onclick="contact()">Liên hệ</button>
-</div>
-
-<div id="pho-chu-tich" class="info">
-<span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Phó chủ tịch:</span></span><br>
-<span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Giới thiệu: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Tham gia từ: Năm 2020</span>
-<br><br><br>
-<button class="button" onclick="contact()">Liên hệ</button>
-</div>
-
-<div id="bao-ve" class="info" style="cursor: not-allowed;">
-<span style=" font-weight: 700; line-height: 2.0em;"><span style="color: black;">&nbsp;Bảo vệ:</span></span><br>
-<span style="color: #222222;"> Tên: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Năm sinh: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Giới thiệu: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br><br>
-<span style="color: #222222;"> Tham gia từ: Năm 2020</span>
-<br><br><br>
-<button class="button" style="cursor:not-allowed;">Liên hệ</button>
-</div>
-</div></center>
-<br><br><br><br><br><br><br><br>
-</div>
- 
-<div id="part3" style="background-color:#199999;">
-<!--div id="iright">
-<img src="/image/snake.png" alt="Game">
-</div-->
-<div id="n" style="margin-top: 0px; height: 785px;">
-<p style="font-family: 'Montserrat', sans-serif; color:#fff300; margin-left: 10%; margin-right: 20%;">
-<br><br><br>
-3. Bấm nút "Đầu tư" nào!
-<br><br><br><br></p>
-<center>
-<!--svg width="360" height="350">
-<polyline points="0,0 0,350 360,350"
-      fill="transparent" stroke="red" stroke-width="3" />
-<polyline points="10,340 80,300 160,250 240,110 320,50 360,20 345,10 360,20 352,45"
-      fill="transparent" stroke="yellow" stroke-width="5" />
-<circle cx="315" cy="32" r="8" fill="red" stroke-width="7"/>
-<text fill="#ffffff" font-size="15" font-family="Verdana" x="305" y="70">y=f(x)</text>
-</svg-->
-<img id="dautu" src="/image/invest.gif" />
-</center>
-<center><button id="but1" class="button" onclick="alert('Bạn đã đầu tư thành công! Xin chúc mừng!');invest=true;">Đầu tư</button></center>
-</div>
-</div>
- 
-<div id="part4" style="background-color:#199999;">
-
-<!--div id="iright">
-<img src="/image/Logo_Hust.png" alt="HUST">
-</div-->
-<p style="font-family: 'Montserrat', sans-serif; color:#fff300; margin-left: 10%; margin-top: 0px; margin-right: 20%; height:100px;">
-<br><br><br>
-4. HUST - Ha Noi University of Sience and Technology
-</p>
-<center><div class="card_container">
-		<div class="card"><img src="/image/card.png" width="760px" /></div>
-		<div class="card"><img src="/image/card2.png" width="760px" /></div>
-		<div class="card"><img src="/image/card.png" width="760px" /></div>
+	<div class="nav_container">
+		<div class="logo_container">
+			<div class="logo">
+			<i class='bx bx-terminal'></i>
+			<div class="logo_name">AMAAGROUP</div>
+			</div>
+			<i class='bx bx-menu' id="btn"></i>
+		</div>
+		<div class="nav_list">
+		<ul>
+			<li>
+				<a href="#">
+				<i class='bx bx-search' ></i>
+				<input type="text" placeholder="Tìm kiếm...">
+				</a>
+				<span class="alt_name">Tìm kiếm</span>
+			</li>
+			<li>
+				<a href="#">
+				<i class='bx bx-home' ></i>
+				<span class="links_name">Trang chủ</span>
+				</a>
+				<span class="alt_name">Trang chủ</span>
+			</li>
+			<li>
+				<a href="#">
+				<i class='bx bxs-contact'></i>
+				<span class="links_name">Liên hệ</span>
+				</a>
+				<span class="alt_name">Liên hệ</span>
+			</li>
+			<li>
+				<a href="./typing-test/">
+				<i class='bx bxs-keyboard' ></i>
+				<span class="links_name">Typing-test</span>
+				</a>
+				<span class="alt_name">Typing-test</span>
+			</li>
+			<li>
+				<a href="./game/">
+				<i class='bx bx-game' ></i>
+				<span class="links_name">Game</span>
+				</a>
+				<span class="alt_name">Game</span>
+			</li>
+			<li>
+				<a href="#">
+				<i class='bx bx-donate-heart' ></i>
+				<span class="links_name">Ủng hộ</span>
+				</a>
+				<span class="alt_name">Ủng hộ</span>
+			</li>
+			<li>
+				<a href="#">
+				<i class='bx bx-help-circle' ></i>
+				<span class="links_name">Trợ giúp</span>
+				</a>
+				<span class="alt_name">Trợ giúp</span>
+			</li>
+		</ul>
+		</div>
+		<div class="credit">
+			<p>2021 AMAA</p>
+		</div>
 	</div>
-<div style="text-align:center; color:gray;">
-        <span class="dot" onclick="currentSlide(0)" style="font-size:85px; cursor:pointer;">.</span> 
-        <span class="dot" onclick="currentSlide(1)" style="font-size:85px; cursor:pointer;">.</span> 
-		<span class="dot" onclick="currentSlide(2)" style="font-size:85px; cursor:pointer;">.</span> 
-      </div>  	
-</center>
-<script>
-      //khai báo biến slideIndex đại diện cho slide hiện tại
-      var slideIndex,t;
-      // KHai bào hàm hiển thị slide
-      function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("card");
-          var dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-             slides[i].style.display = "none";  
-          }
-		  for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-
-          slides[slideIndex].style.display = "block"; 
-		  dots[slideIndex].className += " active";		  
-          //chuyển đến slide tiếp theo
-          slideIndex++;
-          //nếu đang ở slide cuối cùng thì chuyển về slide đầu
-          if (slideIndex > slides.length - 1) {
-            slideIndex = 0
-          }    
-          //tự động chuyển đổi slide sau 5s
-          t = setTimeout(showSlides, 5000);
-      }
-      //mặc định hiển thị slide đầu tiên 
-      showSlides(slideIndex = 0);
-	  
-      function currentSlide(n) {
-	    clearTimeout(t);
-		showSlides(slideIndex = n);
+	<script>
+		let btn = document.querySelector('#btn');
+		let sidebar = document.querySelector('.nav_container');
+		let searchBtn = document.querySelector('.bx-search');
 		
-      }
-</script>
-
-
-<br><br><br>
-</div>
- 
-<div id="part5">
-	<p style="font-family: 'Montserrat', sans-serif; margin-left: 20%; margin-top: 0px; margin-right: 15%; height: 800px;">
-<br><br><br>
-5. Hmm.................................................
-</p>
-
-</div>
-
-<div id="botpage">
-<br><br><br>
-<br><br><br>
-<div>
-<div id="bottext" class="foot">
-	<p style="font-family: 'Montserrat', sans-serif; font-size: 0.875rem; width: 66%; margin-left: 8%; height: 200px; color: #fffabc;" class="font-size-sm text-white opacity-70 pb-1">
-	Trang web này đang trong quá trình hoàn thiện. Nội dung ở đây sẽ được bổ sung sau.
-	</p></div>
-  <div id="location" class="foot">
-  <p style="font-family: 'Montserrat', sans-serif; font-size: 0.875rem; width: 66%; margin-right: 8%; height: 200px; color: #fffabc;" class="font-size-sm text-white opacity-70 pb-1">
-    Địa chỉ: Việt Nam
-  </p></div>
-</div>
-<div id="bmenu">
-	<img id="imenu" class="icmenu" src="/image/menu.png" style="height:40px;" alt="bmenu" onmouseover="this.src='/image/menuhover.png'" onmouseout="this.src='/image/menu.png'" onclick="bmenu()">
-<div id="sub-bmenu" style="cursor: pointer; display: none;"><ul>
-	<li><a href="/typing-test/"> Typing</a></li>
-    <li><a href="/sudoku/"> Sudoku</a></li>
-	</ul>
-</div>
-</div>
-
-<center>
-<br><br>
-	<a href="http://fb.com" target="_blank"><img src="/image/fb.png" alt="facebook" style="width: 30px;height:30px; margin-right:10px;"></a>
-	<a href="http://gmail.com" target="_blank"><img src="/image/mail.png" alt="Mail" style="width: 30px;height:30px;margin-right:10px;"></a>
-	<a href="http://github.com" target="_blank"><img src="/image/github.png" alt="Github" style="width: 30px;height:30px;"></a>
-</center>
-<br>
-	<center style="font-family: 'Noto Sans JP', sans-serif; font-size: 10px;">&copy Designed by AMAA</center>
-<br>
-</div>
-
-</body></html>
+		btn.onclick = function(){
+			sidebar.classList.toggle("active");
+		}
+		searchBtn.onclick = function(){
+			sidebar.classList.toggle("active");
+		}
+	</script>
+	<div class="content">
+		<div class="hello">
+			<div class="amaa">
+				<div>AMAA</div>
+				<p>Chào mừng đến với Website của AMAA.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
