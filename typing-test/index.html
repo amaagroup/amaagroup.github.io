@@ -2,148 +2,23 @@
 <html lang="vi">
 <head>
 <title>Typing Test</title>
-<link rel="apple-touch-icon" sizes="180x180" href="/image/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/image/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/image/icon/favicon-16x16.png">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&amp;family=Noto+Sans+JP&amp;display=swap" rel="stylesheet">
+<script type="text/javascript" src="/script/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/script/sidebar.js"></script>
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/typing.css"> 
 <meta charset="UTF-8"/>
 <head>
-<body onload="document.forms.formb.testbox.focus();">
-<style>
-* {
-	margin:0;
-	padding:0;
-	border-radius: 8px;
-}
-p {
-	text-align: center;
-	font-size: 4rem;
-	font-family: 'Montserrat', Verdana,san-serif;
-}
-#box span {
-	padding-left: 0.675rem;
-	cursor: default;
-}
-input[type=text]{
-	font-family: 'Montserrat';
-	height: 5rem;
-	width: 45%;
-	min-width: 28rem;
-	font-size: 3rem;
-	padding: 0 2rem;
-	outline: none;
-	border: none;
-}
-/* id css */
-#box {
-	background-color: #add5ff;
-	width: calc(45% + 10rem);
-	min-width: 38rem;
-	height: max-content;
-	padding: 0.5rem 0.5rem;
-}
-#boxtimer {
-	width: 15rem;
-	height: 5rem;
-	margin: 0 auto;
-	position: relative;
-	font-size: 30px;
-}
-#result {
-	display: none;
-	background-color: #e3e3e3;
-	font-size: 1.6rem;
-	text-align: left;
-	width: 20rem;
-	height: 23rem;
-	padding: 1rem 1rem;
-	font-family: 'Montserrat',Verdana;
-}
-#result span:hover{
-	cursor: pointer;
-	width: 100%;
-	height: 4rem;
-	transition: 300ms;
-}
-#kq {
-	line-height: 50px;
-	text-align: center;
-}
-/* classes css */
-.details{
-	display: flex;
-	justify-content: space-between;
-}
-.word {
-	color: #000000;
-	font-family: 'Montserrat',san-serif;
-	font-size: 2.5rem;
-}
-.active {
-	background-color: #DDDDDD;
-}
-form {
-	display: flex;
-	justify-content: center;
-	border-radius: 8px;
-}
-.button{
-	height:5rem;
-	width: 8rem;
-	font-family: 'Montserrat';
-	font-size: 2rem;
-	padding: 0.5rem 0.8rem;
-	transform: translateX(5px);
-	transition: 300ms;
-	cursor: pointer;
-	outline: none;
-	color: #000;
-	background: #fff;
-}
-.button:hover{
-	transform: translateX(10px);	
-	background: #353941;
-	color: #fff;
-}
-/* keyframes css */
-@keyframes button {
-	100% {left:1080px;}
-}
-@keyframes result {
-	50% {
-		width: 230px;
-		height: 280px;
-	}
-}
-@keyframes wpm {
-	50% {font-size: 34px;}	
-}
-@keyframes fly {
-	0%,100% {left: 0;
-	top: 0;}
-	25% {left: 100%; top: 0;}
-	50% {left: 100%; top: 5rem;}
-	75% {left: 0; top: 5rem;}
-}
-</style>
-<script>
-	// Khai báo biến
-	var timer=59,wordIndex=0,tmp,char=0;
-	var start=false,normal=true,a=true;
-	var wordIndex,timer=59,cc=0,wc=0,wpm=0;
-	var words = document.getElementsByClassName("word");
-	var dictionary = ['bắt','đầu','kiểm','tra','tốc','độ','đánh','máy','của','bạn','gõ','phím','để','bầu','trời','trường','học','quy','biển','điện','tử','dạ','vâng','công','nghệ','gió','cầu','đường','xin','lỗi','cổ','tích','loài','vật','em','bay','thơ','cảm','giao','thông','mà','giao','thông','vui','vẻ','là','rán','cảm','con','người','phải','hay','khoa','bánh','trường','học','hà','nội','in','lang','dạy','nhung','chào','khó','khăn','phép','thế','giới','sống','hỷ','gì','bay','vì','vệ','sinh','thi','hành','trường','học','phương','ngày','tình','yêu','sơ','ngủ','cười','nắng','phần','tia','nắng','thi','hành','ký','tên','đơn','bướm','kĩ','thuật','đợi','chi','sung','sướng','cổ','tích','hạnh','phúc','trả','lời','phần','món','ăn','phố','xin','bóng','xã','hội','khoa','dạy','trời','lũ','mình','ký','tên','anh','hi','thư','bóng','viết','lách','bánh','lịch','sử','cuộc','đời','pháp','luật','hoàn','toàn','cô','tổ','quốc','hà','công','trình','xanh','nắng','tên','rán','chăm','giành','lành','bão','sài','gòn','kinh','mình','bếp','hãy','trả','lời','hoài','nhạc','vui','vẻ','hả','kĩ','thuật','thanh','niên','đinh','hay','nga','quảng','bình','theo','thành','ngành','giấy','tờ','bao','quát','nhà','cao','công','nghệ','chính','thay','mặt','lại','đi','phải','thơ','nhà','xin','lỗi','kính','phải','là','làm','viết','lách','giấy','tờ','hà','nội','xa','đàn','sáo','báo','nào','xanh','tin','sinh','khoa','phối','hợp','quảng','bình','theo','ẩm','thực','quảng','nam','hoài','công','trình','phép','đỏ','thanh','đơn','dũng','bão','ngữ','văn','món','ăn','bếp','làm','sinh','đất','ngoài','da','sinh','học','ngữ','văn','khỏe','mạnh','bà','tôi','vệ','sinh','lại','đi','xã','hội','phương','gửi','xa','hạt','biển','bao','quát','kiến','trúc','chị','khánh','cao','phép','kính','thanh','bà','nhân','dân','em','lựu','xây','dựng','chào','sợ','giành','dũng','phủ','tỉnh','sài','gòn','độc','lập','hãy','tia','nắng','ngành','ngoài','phủ','minh','chim','khóc','trong','chú','năm','trang','dễ','dàng','đỏ','đợi','chi','hướng','nga','dễ','dàng','quảng','nam','pháp','luật','trời','ba','lang','đánh','tỉnh','hả','thang','gió','cuộc','đời','chị','lành','cười','mẹ','sư','phạm','hướng','phố','in','tu'];
-</script>
+<body>
+<div id="nav_container"></div>
+<div class="content typing">
 <div>
 <p>Typing test </p><br>
 <div id="boxtimer"><p id="timer">1:00</p>
-<svg id="dot" width="10" height="10" style="background-color: transparent; position:absolute; left: 0; top: 0; z-index: 9999; animation: fly 2s 0s infinite;">
+<svg id="dot" width="10" height="10">
 	<circle cx="5" cy="5" r="3" fill="red"/>
 </svg>
 </div><br>
 <center>
-	<!-- văn bản để kiểm tra -->
 <div id="box">
 <span id="word0" class="word"></span>		<span id="word1" class="word"></span>
 <span id="word2" class="word"></span>		<span id="word3" class="word"></span>
@@ -158,98 +33,24 @@ form {
 <span id="word20" class="word"></span>		<span id="word21" class="word"></span>
 <span id="word22" class="word"></span>		<span id="word23" class="word"></span>
 <span id="word24" class="word"></span>		<span id="word25" class="word"></span>
-
 </div>
 <br><br>
 <div id="input">
-<script>
-	// Tạo mới văn bản
-	function creatnew() {
-			var x;
-			for (var i=0;i<words.length;i++)
-				{	
-					x = Math.floor(Math.random()*(dictionary.length - 1));
-					document.getElementById('word'+i).innerHTML = dictionary[x];
-					document.getElementById('word'+i).style.color = '#000000';
-				}
-			tmp=document.getElementById('word0').innerHTML;
-	  }
-	// Tô từ cần gõ
-	function activeword() {
-	      var i;
-		  for (i = 0; i < words.length; i++) {
-	          words[i].className = words[i].className.replace(" active", "");
-	      }
-		  words[wordIndex].className += " active";
-		  tmp=words[wordIndex].innerHTML;
-		  if (wordIndex==0) creatnew();
-		  wordIndex++;
-		  
-	      if (wordIndex > words.length - 1) {
-			wordIndex = 0;
-	      }    
-	  }	  
-	// Đồng hồ đếm ngược
-	function count() {
-			if (timer>=10) document.getElementById('timer').innerHTML = '0:'+timer;
-			if (timer<10) document.getElementById('timer').innerHTML = '0:0'+timer;
-			timer-=1;
-			if (timer>=0 && start) setTimeout(count,1000);
-			else {result();}
-	  }
-	// Kiểm tra gõ
-	function check() {
-			var text = document.getElementById('testbox').value;
-			var last = text.trim();
-			if (last != text && last != "" && text[text.length - 1]==" ") {
-			var x = wordIndex - 1;
-			if (x==-1) x = words.length - 1;
-			if (last == tmp) {
-				document.getElementById('word'+x).style.color = '#00dd00';
-				wc++;
-				for (var i=0;i<tmp.length;i++) {
-					if (tmp[i]=='ă'||tmp[i]=='â'||tmp[i]=='đ'||tmp[i]=='ê'||tmp[i]=='ô'||tmp[i]=='ơ'||tmp[i]=='ư'||tmp[i]=='á'||tmp[i]=='à'||tmp[i]=='ả'||tmp[i]=='ã'||tmp[i]=='ạ'||tmp[i]=='é'||tmp[i]=='è'||tmp[i]=='ẻ'||tmp[i]=='ẽ'||tmp[i]=='ẹ'||tmp[i]=='í'||tmp[i]=='ì'||tmp[i]=='ỉ'||tmp[i]=='ĩ'||tmp[i]=='ị'||tmp[i]=='ó'||tmp[i]=='ò'||tmp[i]=='ỏ'||tmp[i]=='õ'||tmp[i]=='ọ'||tmp[i]=='ú'||tmp[i]=='ù'||tmp[i]=='ủ'||tmp[i]=='ũ'||tmp[i]=='ụ'||tmp[i]=='ý'||tmp[i]=='ỳ'||tmp[i]=='ỷ'||tmp[i]=='ỹ'||tmp[i]=='ỵ') {char+=2; }
-					else if (tmp[i]=='a'||tmp[i]=='b'||tmp[i]=='c'||tmp[i]=='d'||tmp[i]=='e'||tmp[i]=='g'||tmp[i]=='h'||tmp[i]=='i'||tmp[i]=='k'||tmp[i]=='l'||tmp[i]=='m'||tmp[i]=='n'||tmp[i]=='o'||tmp[i]=='p'||tmp[i]=='q'||tmp[i]=='r'||tmp[i]=='s'||tmp[i]=='t'||tmp[i]=='u'||tmp[i]=='v'||tmp[i]=='x'||tmp[i]=='y') {char+=1; }
-					else char+=3;
-				}
-				cc += char + 1;
-				char=0;
-			}
-			else document.getElementById('word'+x).style.color = '#dd0000';
-			document.getElementById('testbox').value ='';
-			activeword();
-		}
-		if (text[0]==" ") 	document.getElementById('testbox').value = '';
-	}
-	// Hiện kết quả và hiệu ứng
-	function result(){
-		wpm=cc/5;
-		document.getElementById('box').style.display = 'none';
-		document.getElementById('result').style.display = 'grid';
-		document.getElementById('wpm').innerHTML = wpm + ' WPM';
-		document.getElementById('wpm').style.animation = 'wpm 2s 0.1s 5';
-		document.getElementById('cc').textContent = cc;
-		document.getElementById('wc').textContent = wc;
-		document.getElementById('dot').style.animationPlayState = 'paused';
-		document.body.style.background = '#90B8F8';
-	  }
-
-	activeword();
-</script>
-<form id="formb" >
-<input id="testbox" type="text"  placeholder="Type here" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" onload="this.focus();this.select();" onkeyup="if (start) {check()}; if(start==false) {start = true;count();}"/>
-<button id="but" class="button" onclick="location.reload()">Again</button></form>
+<script type="text/javascript" src="/script/typing.js"></script>
+<div id="formb" >
+<input id="testbox" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+<button id="but" class="button" onclick="window.location.reload()">Again</button></div>
 </div><br><br>
 
 
 <div id="result">
 <br>
 <div style="height: 50px; width: 100%;">
-<p id="kq"><span id="wpm" style="font-size:25px;font-weight: bolder;color:green;font-family: Verdana;">0 WPM</span></p></div><br><br>
+<p id="kq"><span id="wpm">0 WPM</span></p></div><br><br>
 <div class="details">Character correct:<span id="cc">0</span></div><br><br>
 <div class="details">Word correct:<span id="wc">0</span></div><br><br>
 </div>
 </center>
-</div>
+</div></div>
 </body>
 </html>

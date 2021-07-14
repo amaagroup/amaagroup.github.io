@@ -4,90 +4,15 @@
 	<meta charset="utf-8">
 	<title>Home</title>
 	<!--link rel="icon" type="image/ico" href="./favicon.ico"-->
-	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="./nav.css">  
-	<link rel="stylesheet" href="./style.css">   
+	<link rel="stylesheet" href="/css/nav.css">  
+	<link rel="stylesheet" href="/css/home.css">   
+	<script type="text/javascript" src="/script/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="/script/sidebar.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<!--script type="text/javascript" src="./script.js"></script-->
 </head>
 <body>
-	<div class="nav_container">
-		<div class="logo_container">
-			<div class="logo">
-			<i class='bx bx-terminal'></i>
-			<div class="logo_name">AMAAGROUP</div>
-			</div>
-			<i class='bx bx-menu' id="btn"></i>
-		</div>
-		<div class="nav_list">
-		<ul>
-			<li>
-				<a href="#">
-				<i class='bx bx-search' ></i>
-				<input type="text" placeholder="Tìm kiếm...">
-				</a>
-				<span class="alt_name">Tìm kiếm</span>
-			</li>
-			<li>
-				<a href="#">
-				<i class='bx bx-home' ></i>
-				<span class="links_name">Trang chủ</span>
-				</a>
-				<span class="alt_name">Trang chủ</span>
-			</li>
-			<li>
-				<a href="#">
-				<i class='bx bxs-contact'></i>
-				<span class="links_name">Liên hệ</span>
-				</a>
-				<span class="alt_name">Liên hệ</span>
-			</li>
-			<li>
-				<a href="./typing-test/">
-				<i class='bx bxs-keyboard' ></i>
-				<span class="links_name">Typing-test</span>
-				</a>
-				<span class="alt_name">Typing-test</span>
-			</li>
-			<li>
-				<a href="./game/">
-				<i class='bx bx-game' ></i>
-				<span class="links_name">Game</span>
-				</a>
-				<span class="alt_name">Game</span>
-			</li>
-			<li>
-				<a href="#">
-				<i class='bx bx-donate-heart' ></i>
-				<span class="links_name">Ủng hộ</span>
-				</a>
-				<span class="alt_name">Ủng hộ</span>
-			</li>
-			<li>
-				<a href="#">
-				<i class='bx bx-help-circle' ></i>
-				<span class="links_name">Trợ giúp</span>
-				</a>
-				<span class="alt_name">Trợ giúp</span>
-			</li>
-		</ul>
-		</div>
-		<div class="credit">
-			<p>2021 AMAA</p>
-		</div>
-	</div>
-	<script>
-		let btn = document.querySelector('#btn');
-		let sidebar = document.querySelector('.nav_container');
-		let searchBtn = document.querySelector('.bx-search');
-		
-		btn.onclick = function(){
-			sidebar.classList.toggle("active");
-		}
-		searchBtn.onclick = function(){
-			sidebar.classList.toggle("active");
-		}
-	</script>
+	<div id="nav_container"></div>
 	<div class="content">
 		<div class="hello">
 			<div class="amaa">
