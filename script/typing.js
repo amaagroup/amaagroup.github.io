@@ -13,7 +13,9 @@ $(document).ready(function(){
 			start = true;
 			count();
 		}
-	})});
+	});
+	$('#testbox').focus();	
+});
 
 // Tạo mới văn bản
 	function createnew() {
@@ -76,14 +78,15 @@ $(document).ready(function(){
 	// Hiện kết quả và hiệu ứng
 	function result(){
 		wpm=cc/5;
+		timer = 0;
 		document.getElementById('dot').style.animationPlayState = 'paused';
 		document.getElementById('result').style.display = 'grid';
-		$('#result').show(300);
+		$('#testbox').hide(500);
+		$('#result').show(1000);
 		$('#box').hide(300);
 		$('#wpm').html(wpm.toString() + ' WPM');
 		$('#cc').html(cc);
 		$('#wc').html(wc);
-		document.getElementById('wpm').style.animation = 'wpm 2s 0.1s 5';
 	  }
 
 	activeword();

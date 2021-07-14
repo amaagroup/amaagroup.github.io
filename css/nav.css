@@ -112,10 +112,11 @@ body{
 }
 #nav_container ul li .bx-search:hover,
 #nav_container ul li input::selection,
-#nav_container ul li a:hover {
+#nav_container ul li a:hover,
+#nav_container ul li a:focus{
 	background: var(--whitemilk);
-	color: var(--blackless);
-	
+	color: var(--blackmore);
+
 }
 #nav_container ul li a{
 	color: var(--whitemilk);
@@ -123,12 +124,10 @@ body{
 	align-items: center;
 	border-radius: 12px;
 	text-decoration: none;
+	outline: none;
+	border: none;
 	transition: 300ms ease;
 	white-space: nowrap;
-}
-{
-	background: var(--whitemilk);
-	color: var(--blackless);
 }
 #nav_container ul li i{
 	height: 50px;
@@ -183,6 +182,10 @@ body{
 #nav_container .credit p{
 	font-size: 10px;
 	text-align: center;
+}
+#nav_container .credit p::selection{
+	background: var(--whitemilk);
+	color: var(--blackmore);
 }
 .content{
 	width: calc(100% - 78px);
