@@ -10,11 +10,17 @@
     width: 100%;
     height: 100%;
     background: var(--bluelight);
+    position: relative;
 }
 
 .content .hello .amaa {
     width: 100%;
     height: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 400ms ease;
 }
 
 .content .hello .amaa div {
@@ -29,9 +35,93 @@
 }
 
 .content .hello .amaa p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-align: center;
+}
+
+.content .hello .nav_card {
+    width: 100%;
+    height: calc(100% - 15rem);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.content .hello .nav_card .table {
+    width: 70%;
+    min-width: 420px;
+    height: calc(100% - 17rem);
+    max-height: 50%;
+    border-radius: 12px;
+    align-items: center;
+    transition: 400ms ease;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.hello .nav_card .table .card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    color: var(--blackmore);
+    background-color: var(--whitemilk);
+    cursor: pointer;
+    transition: 400ms ease;
+}
+
+.hello .nav_card .table .card:hover {
+    color: var(--whitemilk);
+    background-color: var(--blackmore);
+}
+
+.table .card .icons {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 8px;
+}
+
+.table .card .decribe {
+    font-size: 1.375em;
+    max-width: calc(100% - 110px);
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+.nav_card .table .card .bx-right-arrow-circle {
+    display: none;
+    transition: 200ms linear;
+}
+
+.nav_card .table .card:hover .bx-right-arrow-circle {
+    display: inline;
+    font-size: 40px;
 }
 
 
 /*******************************************************************************/
+
+@media only screen and (max-width:650px) {
+    .content .hello .nav_card .table {
+        width: 95%;
+    }
+    .table .card .icons {
+        display: none;
+    }
+    .table .card .decribe {
+        max-width: 100%;
+    }
+}
