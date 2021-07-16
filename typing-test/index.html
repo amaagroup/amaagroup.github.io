@@ -1,62 +1,66 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<title>Typing Test</title>
-<script type="text/javascript" src="/script/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="/script/sidebar.js"></script>
-<link rel="stylesheet" href="/css/nav.css">
-<link rel="stylesheet" href="/css/typing.css"> 
-<meta charset="UTF-8"/>
-<head>
-<body>
-<div id="nav_container"></div>
-<div class="content typing">
-<div>
-<p class="title">Typing test</p><br>
-<div id="boxtimer">
-	<p id="timer">1:00</p>
-	<svg id="dot" width="10" height="10">
-		<circle cx="5" cy="5" r="3" fill="red"/>
-	</svg>
-</div>
-<br>
-		<center>
-		<div id="box">
-		<span id="word0" class="word"></span>		<span id="word1" class="word"></span>
-		<span id="word2" class="word"></span>		<span id="word3" class="word"></span>
-		<span id="word4" class="word"></span>		<span id="word5" class="word"></span>
-		<span id="word6" class="word"></span>		<span id="word7" class="word"></span>
-		<span id="word8" class="word"></span>		<span id="word9" class="word"></span>
-		<span id="word10" class="word"></span>		<span id="word11" class="word"></span>
-		<span id="word12" class="word"></span>		<span id="word13" class="word"></span>
-		<span id="word14" class="word"></span>		<span id="word15" class="word"></span>
-		<span id="word16" class="word"></span>		<span id="word17" class="word"></span>
-		<span id="word18" class="word"></span>		<span id="word19" class="word"></span>
-		<span id="word20" class="word"></span>		<span id="word21" class="word"></span>
-		<span id="word22" class="word"></span>		<span id="word23" class="word"></span>
-		<span id="word24" class="word"></span>		<span id="word25" class="word"></span>
-		</div>
-		<br><br>
-		<div id="input">
-			<script type="text/javascript" src="/script/typing.js"></script>
-			<div id="formb" >
-				<input id="testbox" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-				<button id="but" class="button" onclick="window.location.reload()">Again</button>
-			</div>
-		</div>
-		<br><br>
-		<div id="result">
-			<div style="height: 4rem; width: 100%;">
-				<p id="kq"><span id="wpm">0 WPM</span></p>
-			</div>
-			<br><br>
-			<div class="details">Character correct:<span id="cc">0</span></div>
-			<br><br>
-			<div class="details">Word correct:<span id="wc">0</span></div>
-			<br><br>
-		</div>
-		</center>
-	</div>
-</div>
-</body>
+    <title>Typing Test</title>
+    <script type="text/javascript" src="/script/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/script/sidebar.js"></script>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/typing.css">
+    <meta charset="UTF-8" />
+
+    <head>
+
+        <body>
+            <div id="nav_container"></div>
+            <div class="content typing">
+                <div>
+                    <p class="title">Typing test</p><br>
+                    <div id="boxtimer">
+                        <p id="timer">1:00</p>
+                        <svg id="dot" width="10" height="10">
+						<circle cx="5" cy="5" r="3" fill="red" />
+					</svg>
+                    </div>
+                    <br>
+                    <center>
+                        <div id="box">
+                            <span id="word0" class="word"></span> <span id="word1" class="word"></span>
+                            <span id="word2" class="word"></span> <span id="word3" class="word"></span>
+                            <span id="word4" class="word"></span> <span id="word5" class="word"></span>
+                            <span id="word6" class="word"></span> <span id="word7" class="word"></span>
+                            <span id="word8" class="word"></span> <span id="word9" class="word"></span>
+                            <span id="word10" class="word"></span> <span id="word11" class="word"></span>
+                            <span id="word12" class="word"></span> <span id="word13" class="word"></span>
+                            <span id="word14" class="word"></span> <span id="word15" class="word"></span>
+                            <span id="word16" class="word"></span> <span id="word17" class="word"></span>
+                            <span id="word18" class="word"></span> <span id="word19" class="word"></span>
+                            <span id="word20" class="word"></span> <span id="word21" class="word"></span>
+                            <span id="word22" class="word"></span> <span id="word23" class="word"></span>
+                            <span id="word24" class="word"></span> <span id="word25" class="word"></span>
+                        </div>
+                        <br><br>
+                        <div id="input">
+                            <script type="text/javascript" src="/script/typing.js"></script>
+                            <div id="formb">
+                                <input id="testbox" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                                <button id="but" class="button" onclick="window.location.reload()">Again</button>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div id="result">
+                            <div style="height: 4rem; width: 100%;">
+                                <p id="kq"><span id="wpm">0 WPM</span></p>
+                            </div>
+                            <br><br>
+                            <div class="details">Character correct:<span id="cc">0</span></div>
+                            <br><br>
+                            <div class="details">Word correct:<span id="wc">0</span></div>
+                            <br><br>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </body>
+
 </html>

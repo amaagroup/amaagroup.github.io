@@ -1,125 +1,162 @@
-#nav_container ul li:nth-child(4) a{
-	background: var(--whitemilk);
-	color: var(--blackless);
+#nav_container ul li:nth-child(4) a {
+    background: var(--whitemilk);
+    color: var(--blackless);
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
 /******************************************************************/
-.content.typing *{
-	margin:0;
-	padding:0;
-	border-radius: 8px;
-	font-family: 'Montserrat',san-serif;
+
+.content.typing * {
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    font-family: 'Montserrat', san-serif;
 }
-.content.typing *::selection{
-	background: var(--whitemilk);
-	color: var(--blackless);
+
+.content.typing *::selection {
+    background: var(--whitemilk);
+    color: var(--blackless);
 }
-.content.typing .title{
-	font-family: 'Roboto Mono', monospace;
-	margin-top: 50px;
-	text-align: center;
-	font-size: 4rem;
-	transition: all 300ms ease;
+
+.content.typing .title {
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 4rem;
+    transition: all 300ms ease;
 }
-.content.typing .title:hover{
-	text-transform: uppercase;
+
+.content.typing .title:hover {
+    text-transform: uppercase;
 }
-.content.typing #timer{
-	text-align: center;
-	font-size: 3rem;
+
+.content.typing #timer {
+    text-align: center;
+    font-size: 3rem;
 }
-.content.typing  #box .word {
-	font-size: 2.5rem;
-	padding: 0 0.3rem;
-	cursor: default;
+
+.content.typing #box .word {
+    font-size: 2.5rem;
+    padding: 0 0.3rem;
+    cursor: default;
 }
-.content.typing input[type=text]{
-	height: 5rem;
-	width: 45%;
-	min-width: 28rem;
-	font-size: 2.5rem;
-	padding: 0 2rem;
-	outline: none;
-	border: none;
+
+.content.typing input[type=text] {
+    height: 5rem;
+    width: 45%;
+    min-width: 28rem;
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    outline: none;
+    border: none;
 }
+
 .content.typing #box {
-	width: calc(50% + 10rem);
-	min-width: 38rem;
-	height: max-content;
-	padding: 0.5rem 0.5rem;
+    width: calc(50% + 10rem);
+    min-width: 38rem;
+    height: max-content;
+    padding: 0.5rem 0.5rem;
 }
+
 .content.typing #boxtimer {
-	width: 15rem;
-	height: 5rem;
-	margin: 0 auto;
-	position: relative;
-	display: grid;
-	align-items: center;
+    width: 15rem;
+    height: 5rem;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    align-items: center;
 }
+
 .content.typing #result {
-	display: none;
-	background-color: var(--whitemilk);
-	font-size: 1.6rem;
-	text-align: left;
-	width: 20rem;
-	height: 23rem;
-	padding: 2rem 2rem;
+    display: none;
+    background-color: var(--whitemilk);
+    font-size: 1.6rem;
+    text-align: left;
+    width: 20rem;
+    height: 23rem;
+    padding: 2rem 2rem;
 }
-.content.typing #result span:hover{
-	cursor: pointer;
+
+.content.typing #result span:hover {
+    cursor: pointer;
 }
+
 .content.typing #kq {
-	line-height: 50px;
-	text-align: center;
+    line-height: 50px;
+    text-align: center;
 }
-.content.typing #dot{
-	position:absolute;
-	left: 0;
-	top : 0;
-	transform: translate(-5px,-5px);
-	z-index: 9999;
-	animation: fly 2s 0s infinite;
+
+.content.typing #dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-5px, -5px);
+    z-index: 9999;
+    animation: fly 2s 0s infinite;
 }
-.content.typing #wpm{
- 	font-size: 2.5rem;
- 	font-weight: bolder;
- 	color: var(--bluedark);
+
+.content.typing #wpm {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--bluedark);
 }
-.content.typing .details{
-	display: flex;
-	justify-content: space-between;
+
+.content.typing .details {
+    display: flex;
+    justify-content: space-between;
 }
+
 .content.typing .active {
-	transition: 0.15s;
-	background-color: var(--whitemilk);
+    transition: 0.15s;
+    background-color: var(--whitemilk);
 }
+
 .content.typing #formb {
-	display: flex;
-	justify-content: center;
-	border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
 }
-.content.typing .button{
-	height: 5rem;
-	width: 8rem;
-	font-size: 2rem;
-	padding: 0.5rem 0.8rem;
-	transform: translateX(5px);
-	transition: 300ms;
-	cursor: pointer;
-	outline: none;
-	border: none;
-	color: #000;
-	background: #fff;
+
+.content.typing .button {
+    height: 5rem;
+    width: 8rem;
+    font-size: 2rem;
+    padding: 0.5rem 0.8rem;
+    transform: translateX(5px);
+    transition: 300ms;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #000;
+    background: #fff;
 }
-.content.typing .button:hover{
-	transform: translateY(5px);	
-	background: #353941;
-	color: #fff;
+
+.content.typing .button:hover {
+    transform: translateY(5px);
+    background: #353941;
+    color: #fff;
 }
+
+
 /* keyframes css */
+
 @keyframes fly {
-	0%,100% {left: 0;top: 0;}
-	25% {left: 100%; top: 0;}
-	50% {left: 100%; top: 5rem;}
-	75% {left: 0; top: 5rem;}
+    0%,
+    100% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        left: 100%;
+        top: 0;
+    }
+    50% {
+        left: 100%;
+        top: 5rem;
+    }
+    75% {
+        left: 0;
+        top: 5rem;
+    }
 }

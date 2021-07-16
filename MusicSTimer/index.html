@@ -1,125 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8" />
-	<title>Music Timer</title>
-	<link rel="stylesheet" href="./main.css">
-	<link rel="stylesheet" href="./player.css">
-	<link rel="icon" type="image/ico" href="./favicon.ico">
-	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="./app.js"></script>
-	<script type="text/javascript" src="./player.js"></script>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">	
+    <meta charset="utf-8" />
+    <title>Music Timer</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./player.css">
+    <link rel="icon" type="image/ico" href="./favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="./player.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
+
 <body>
-	<audio class="Music" controls preload="metadata" onended="po_lay()">
+    <audio class="Music" controls preload="metadata" onended="po_lay()">
 		<source id="songWillPlay" src="./Resources/COOLIN_DUB'L U.mp3" type="audio/mpeg">
 	</audio>
 
-	<div id="playButton" class="button" onclick="p=true;po_lay();tapPlay()">
-		<svg height="300" width="300">
+    <div id="playButton" class="button" onclick="p=true;po_lay();tapPlay()">
+        <svg height="300" width="300">
 			<polygon points="90,80.5 210,150 90,219.5" style="fill:white;stroke-width:0;" />
 		</svg>
-	</div>
-	<div id="musicListBox" class="musicListBox" style="display: none;">
-		<div id="musicList_page1" class="musicList" style="display:block;">
-			<div class="songinlist" onclick="ChonBai(1)">
-				<p class="songName"> COOLIN_DUB'L U </p>
-			</div>
-			<div class="songinlist" onclick="ChonBai(2)">
-				<p class="songName"> Yeu Sac Yeu </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 3 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 4 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 5 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 6 </p>
-			</div>
-		</div>
-		<div id="musicList_page2" class="musicList" style="display:none;">
-			<div class="songinlist">
-				<p class="songName"> Song 7 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 8 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 9 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 10 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 11 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 12 </p>
-			</div>
-		</div>
-		<div id="musicList_page3" class="musicList" style="display:none;">
-			<div class="songinlist">
-				<p class="songName"> Song 13 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 14 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 15 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 16 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 17 </p>
-			</div>
-			<div class="songinlist">
-				<p class="songName"> Song 18 </p>
-			</div>
-		</div>
-		<div>
-			<div class="transiDot" style="left:40%;opacity:100%;" onclick="MoveToPage(0)"></div>
-			<div class="transiDot" style="left:50%;" onclick="MoveToPage(1)"></div>
-			<div class="transiDot" style="left:60%;" onclick="MoveToPage(2)"></div>
-		</div>
-	</div>
-	<div id="transi_right" class="transiButton" style="left: calc(50% + 250px);">
-		<svg id="right_arrow" height="50" width="50" class="button_page" onclick="left=false;transiPage()">
-			<polygon points="17,13 37,25 17,37"/>
+    </div>
+    <div id="musicListBox" class="musicListBox" style="display: none;">
+        <div id="musicList_page1" class="musicList" style="display:block;">
+            <div class="songinlist" onclick="ChonBai(1)">
+                <p class="songName"> COOLIN_DUB'L U </p>
+            </div>
+            <div class="songinlist" onclick="ChonBai(2)">
+                <p class="songName"> Yeu Sac Yeu </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 3 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 4 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 5 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 6 </p>
+            </div>
+        </div>
+        <div id="musicList_page2" class="musicList" style="display:none;">
+            <div class="songinlist">
+                <p class="songName"> Song 7 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 8 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 9 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 10 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 11 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 12 </p>
+            </div>
+        </div>
+        <div id="musicList_page3" class="musicList" style="display:none;">
+            <div class="songinlist">
+                <p class="songName"> Song 13 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 14 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 15 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 16 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 17 </p>
+            </div>
+            <div class="songinlist">
+                <p class="songName"> Song 18 </p>
+            </div>
+        </div>
+        <div>
+            <div class="transiDot" style="left:40%;opacity:100%;" onclick="MoveToPage(0)"></div>
+            <div class="transiDot" style="left:50%;" onclick="MoveToPage(1)"></div>
+            <div class="transiDot" style="left:60%;" onclick="MoveToPage(2)"></div>
+        </div>
+    </div>
+    <div id="transi_right" class="transiButton" style="left: calc(50% + 250px);">
+        <svg id="right_arrow" height="50" width="50" class="button_page" onclick="left=false;transiPage()">
+			<polygon points="17,13 37,25 17,37" />
 		</svg>
-	</div>
-	<div id="transi_left" class="transiButton" style="left: calc(50% - 250px);">
-		<svg id="left_arrow" height="50" width="50" class="button_page" onclick="left=true;transiPage()">
-			<polygon points="13,25 33,13 33,37"/>
+    </div>
+    <div id="transi_left" class="transiButton" style="left: calc(50% - 250px);">
+        <svg id="left_arrow" height="50" width="50" class="button_page" onclick="left=true;transiPage()">
+			<polygon points="13,25 33,13 33,37" />
 		</svg>
-	</div>
-	<div class="player">
-		<div class="control" onclick="po_lay()">
-			<svg height="50" width="50" class="paupay">
-				<polygon  points="17,13 37,25 17,37"/>
+    </div>
+    <div class="player">
+        <div class="control" onclick="po_lay()">
+            <svg height="50" width="50" class="paupay">
+				<polygon points="17,13 37,25 17,37" />
 			</svg>
-			<svg height="50" width="50" class="paupay" style="display: none;">
-				<polygon  points="12,12 22,12 22,38 12,38"/>
-				<polygon  points="28,12 38,12 38,38 28,38"/>
+            <svg height="50" width="50" class="paupay" style="display: none;">
+				<polygon points="12,12 22,12 22,38 12,38" />
+				<polygon points="28,12 38,12 38,38 28,38" />
 			</svg>
-		</div>
-		<div class="volume" id="mute" onclick="mute()">
-			<svg height="25" width="25">
-				<polygon  points="4,9 11,9 18,3 18,22 11,16 4,16"/>
+        </div>
+        <div class="volume" id="mute" onclick="mute()">
+            <svg height="25" width="25">
+				<polygon points="4,9 11,9 18,3 18,22 11,16 4,16" />
 			</svg>
-		</div>
-		<div class="slider" onmousedown="Tua(event.clientX)">
-			<div class="dot" id="d"></div>
-		</div>
-		<div class="timer">
-			<p id="timer">-:--/-:--</p>
-		</div>
-	</div>
-	<div class="volume_bar" id="volume_bar" onmousedown="ChangeVolume(event.clientX)" onmouseover="Wait(true)" onmouseout="Wait(false)"><div class="progress" id="volume"></div><div class="percent"><p id="v">100</p></div></div>
+        </div>
+        <div class="slider" onmousedown="Tua(event.clientX)">
+            <div class="dot" id="d"></div>
+        </div>
+        <div class="timer">
+            <p id="timer">-:--/-:--</p>
+        </div>
+    </div>
+    <div class="volume_bar" id="volume_bar" onmousedown="ChangeVolume(event.clientX)" onmouseover="Wait(true)" onmouseout="Wait(false)">
+        <div class="progress" id="volume"></div>
+        <div class="percent">
+            <p id="v">100</p>
+        </div>
+    </div>
 </body>
+
 </html>

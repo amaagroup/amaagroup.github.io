@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Windows 10
-        </title>
-        <link rel="stylesheet" href="/win-lock-screen/style.css"/>
-        <script>
-        var  clicked=false;
-        function overlay(){
-                document.getElementById('overlay').style.animation = 'overlay 0.5s 0s';
-                document.getElementById('time').style.animation = 'fly 0.5s 0s';
-                setTimeout(function(){document.getElementById('time').style.display = 'none';
+
+<head>
+    <title>
+        Windows 10
+    </title>
+    <link rel="stylesheet" href="/win-lock-screen/style.css" />
+    <script>
+        var clicked = false;
+
+        function overlay() {
+            document.getElementById('overlay').style.animation = 'overlay 0.5s 0s';
+            document.getElementById('time').style.animation = 'fly 0.5s 0s';
+            setTimeout(function() {
+                document.getElementById('time').style.display = 'none';
                 document.getElementById('overlay').style.opacity = '0.5';
-                document.getElementById('pw').style.display='block';
-                document.getElementById('avatar').style.display='block';
+                document.getElementById('pw').style.display = 'block';
+                document.getElementById('avatar').style.display = 'block';
                 document.getElementById('user').style.display = 'block';
                 document.getElementById('options').style.display = 'block';
-            },500);
+            }, 500);
         }
-            
-        function show(){
-             if (clicked==false)
-            {
-            document.getElementsByClassName('option').pin.style.display = 'block';
-            document.getElementsByClassName('option').pass.style.display = 'block';
-            document.getElementById('options').style.opacity = '1';
-             clicked=true;
+
+        function show() {
+            if (clicked == false) {
+                document.getElementsByClassName('option').pin.style.display = 'block';
+                document.getElementsByClassName('option').pass.style.display = 'block';
+                document.getElementById('options').style.opacity = '1';
+                clicked = true;
+            } else {
+                document.getElementsByClassName('option').pin.style.display = 'none';
+                document.getElementsByClassName('option').pass.style.display = 'none';
+                document.getElementById('options').style.opacity = '0.5';
+                clicked = false;
+            }
         }
-        else {
-            document.getElementsByClassName('option').pin.style.display = 'none';
-            document.getElementsByClassName('option').pass.style.display = 'none';
-            document.getElementById('options').style.opacity = '0.5';
-            clicked=false;
-        }
-    }
-        
-    setInterval( function(){
+
+        setInterval(function() {
             var d = new Date();
             var h = d.getHours();
             var m = d.getMinutes();
@@ -43,86 +44,142 @@
             var thu_c, tha_c;
             var ngay = d.getDate();
             var thang = d.getMonth();
-            switch (thu){
-                case 0: thu_c = 'Chủ Nhật';break;
-                case 1: thu_c = 'Thứ Hai';break;
-                case 2: thu_c = 'Thứ Ba';break;
-                case 3: thu_c = 'Thứ Tư';break;
-                case 4: thu_c = 'Thứ Năm';break;
-                case 5: thu_c = 'Thứ Sáu';break;
-                case 6: thu_c = 'Thứ Bảy';
+            switch (thu) {
+                case 0:
+                    thu_c = 'Chủ Nhật';
+                    break;
+                case 1:
+                    thu_c = 'Thứ Hai';
+                    break;
+                case 2:
+                    thu_c = 'Thứ Ba';
+                    break;
+                case 3:
+                    thu_c = 'Thứ Tư';
+                    break;
+                case 4:
+                    thu_c = 'Thứ Năm';
+                    break;
+                case 5:
+                    thu_c = 'Thứ Sáu';
+                    break;
+                case 6:
+                    thu_c = 'Thứ Bảy';
             }
-            switch (thang){
-                case 0: tha_c = 'Một';break;
-                case 1: tha_c = 'Hai';break;
-                case 2: tha_c = 'Ba';break;
-                case 3: tha_c = 'Tư';break;
-                case 4: tha_c = 'Năm';break;
-                case 5: tha_c = 'Sáu';break;
-                case 6: tha_c = 'Bảy';break;
-                case 7: tha_c = 'Tám';break;
-                case 8: tha_c = 'Chín';break;
-                case 9: tha_c = 'Mười';break;
-                case 10: tha_c = 'Mười Một';break;
-                case 11: tha_c = 'Mười Hai';;
+            switch (thang) {
+                case 0:
+                    tha_c = 'Một';
+                    break;
+                case 1:
+                    tha_c = 'Hai';
+                    break;
+                case 2:
+                    tha_c = 'Ba';
+                    break;
+                case 3:
+                    tha_c = 'Tư';
+                    break;
+                case 4:
+                    tha_c = 'Năm';
+                    break;
+                case 5:
+                    tha_c = 'Sáu';
+                    break;
+                case 6:
+                    tha_c = 'Bảy';
+                    break;
+                case 7:
+                    tha_c = 'Tám';
+                    break;
+                case 8:
+                    tha_c = 'Chín';
+                    break;
+                case 9:
+                    tha_c = 'Mười';
+                    break;
+                case 10:
+                    tha_c = 'Mười Một';
+                    break;
+                case 11:
+                    tha_c = 'Mười Hai';;
             }
-            if (h<10) h='0'+h;
-            if (m<10) m='0'+m;
-            document.getElementById('hour').innerHTML = h+':'+m;
+            if (h < 10) h = '0' + h;
+            if (m < 10) m = '0' + m;
+            document.getElementById('hour').innerHTML = h + ':' + m;
             document.getElementById('date').innerHTML = thu_c + ', ' + ngay + ' Tháng ' + tha_c;
-        },1000);
-        </script>
-        <meta charset="utf-8"/>
-    </head>
-    <body onload="alert('Bấm F11 để mở toàn màn hình.');">
-        <div id="overlay"   onclick="overlay()"></div>
-        <div id="time">
-            <span id="hour"> </span><br />
-            <span id="date"> </span>
-        </div>
-        <div id="wifi" class="button noti" style="right:90px;"><svg id="vt1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="white" class="bi bi-wifi" viewBox="0 0 16 16">
-            <path d="M15.385 6.115a.485.485 0 0 0-.048-.736A12.443 12.443 0 0 0 8 3 12.44 12.44 0 0 0 .663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.717 2.164.204.148.489.13.668-.049z"/>
-            <path d="M13.229 8.271c.216-.216.194-.578-.063-.745A9.456 9.456 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.577 1.336c.205.132.48.108.652-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.472 6.472 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.408.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.611-.091l.015-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .708 0l.707-.707z"/>
-          </svg></div>
-        <div id="battery" class="button noti" style="right: 35px;"><svg id="vt2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="white" class="bi bi-battery-full" viewBox="0 0 16 16">
-            <path d="M2 6h10v4H2V6z"/>
-            <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h10zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z"/>
-          </svg></div>
-        <div id="avatar"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="#353838" class="bi bi-person-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-          </svg></div>
-        <div id="user"><span id="name">Admin</span></div>
-        <div id="pw"><input id="signin" type="password" placeholder="PIN" onkeyup="if(event.keyCode==13) {document.getElementById('error').style.display='block';setTimeout(function(){document.getElementById('error2').style.display='block';},5000);}"></input></div>
-        <div id="options">
-            <script>
-                var x=document.getElementsByClassName('option');
-                function a(i){
-                    x[i].className ='button option active';
-                    x[1-i].className = 'button option';
-                    if (i==1) document.getElementById('signin').placeholder='PIN';
-                    if (i==0) document.getElementById('signin').placeholder='Password';               
+        }, 1000);
+    </script>
+    <meta charset="utf-8" />
+</head>
 
-                }
-            </script>
-            <span onclick="show()">Sign-in options</span><br />
-            <div id="pass" class="button option" style="margin-top: 10px;margin-left: -10px;" onclick="a(0)"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="white" class="bi bi-key" viewBox="0 0 16 16">
-                <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
-                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-              </svg></div>
-            <div id="pin" class="button option active"  style="margin-left: 50px;margin-top: 10px;" onclick="a(1)"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="white" class="bi bi-keyboard" viewBox="0 0 16 16">
-                <path d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z"/>
-                <path d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5z"/>
-              </svg></div>
-        </div>
-        <div id="error" style="background-color: #00adef;position: absolute; width: 100%; height: 100%; top:0px; left:0px; z-index: 10;display: none;cursor:none;">
+<body onload="alert('Bấm F11 để mở toàn màn hình.');">
+    <div id="overlay" onclick="overlay()"></div>
+    <div id="time">
+        <span id="hour"> </span><br />
+        <span id="date"> </span>
+    </div>
+    <div id="wifi" class="button noti" style="right:90px;"><svg id="vt1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="white" class="bi bi-wifi" viewBox="0 0 16 16">
+            <path
+                d="M15.385 6.115a.485.485 0 0 0-.048-.736A12.443 12.443 0 0 0 8 3 12.44 12.44 0 0 0 .663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.717 2.164.204.148.489.13.668-.049z" />
+            <path
+                d="M13.229 8.271c.216-.216.194-.578-.063-.745A9.456 9.456 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.577 1.336c.205.132.48.108.652-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.472 6.472 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.408.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.611-.091l.015-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .708 0l.707-.707z" />
+        </svg></div>
+    <div id="battery" class="button noti" style="right: 35px;"><svg id="vt2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="white" class="bi bi-battery-full" viewBox="0 0 16 16">
+            <path d="M2 6h10v4H2V6z" />
+            <path
+                d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h10zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z" />
+        </svg></div>
+    <div id="avatar"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="#353838" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg></div>
+    <div id="user"><span id="name">Admin</span></div>
+    <div id="pw"><input id="signin" type="password" placeholder="PIN" onkeyup="if(event.keyCode==13) {document.getElementById('error').style.display='block';setTimeout(function(){document.getElementById('error2').style.display='block';},5000);}"></input>
+    </div>
+    <div id="options">
+        <script>
+            var x = document.getElementsByClassName('option');
+
+            function a(i) {
+                x[i].className = 'button option active';
+                x[1 - i].className = 'button option';
+                if (i == 1) document.getElementById('signin').placeholder = 'PIN';
+                if (i == 0) document.getElementById('signin').placeholder = 'Password';
+
+            }
+        </script>
+        <span onclick="show()">Sign-in options</span><br />
+        <div id="pass" class="button option" style="margin-top: 10px;margin-left: -10px;" onclick="a(0)"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="white" class="bi bi-key" viewBox="0 0 16 16">
+                <path
+                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+            </svg></div>
+        <div id="pin" class="button option active" style="margin-left: 50px;margin-top: 10px;" onclick="a(1)"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="white" class="bi bi-keyboard" viewBox="0 0 16 16">
+                <path
+                    d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z" />
+                <path
+                    d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5z" />
+            </svg></div>
+    </div>
+    <div id="error" style="background-color: #00adef;position: absolute; width: 100%; height: 100%; top:0px; left:0px; z-index: 10;display: none;cursor:none;">
         <div id="xoay" style="position: fixed; top:47vh; left:47%;">
-            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
         <div id="shutdown" style="text-align:center; position:relative; font-size: 35px; color:white;"><span style="position: inherit; top:60vh;">Shutting down</span></div>
-        </div>
-        <div id="error2" style="background-color: black;position: absolute; width: 100%; height: 100%; top:0px; left:0px; z-index: 11;display: none;cursor:none;">
-        
+    </div>
+    <div id="error2" style="background-color: black;position: absolute; width: 100%; height: 100%; top:0px; left:0px; z-index: 11;display: none;cursor:none;">
 
-    </body>
+
+</body>
+
 </html>

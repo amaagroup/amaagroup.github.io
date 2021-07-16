@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap');
 :root {
-	--blackmore: #26282B;
-	--blackless: #353941;
-	--bluedark : #5F85DB;
-	--bluelight: #90B8F8;
-	--whitemilk: #F9F9F9;
+    --blackmore: #26282B;
+    --blackless: #353941;
+    --bluedark: #5F85DB;
+    --bluelight: #90B8F8;
+    --whitemilk: #F9F9F9;
 }
+
 * {
     margin: 0;
     padding: 0;

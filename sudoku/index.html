@@ -17,7 +17,7 @@
             padding: 0;
             font-family: 'Montserrat', monospace;
         }
-
+        
         input[type=number] {
             border: 1px dotted #000;
             height: 30px;
@@ -26,11 +26,11 @@
             text-align: center;
             color: #0000dd;
         }
-
+        
         input:focus {
             background-color: #fff222;
         }
-
+        
         #load {
             width: 0%;
             height: 5px;
@@ -39,9 +39,8 @@
             top: 0px;
             left: 0px;
         }
-
+        
         #hd {
-
             background-color: rgb(92, 185, 64);
             position: absolute;
             top: -400px;
@@ -54,19 +53,18 @@
             border-radius: 15px;
             border: 5px solid black;
         }
-
+        
         @media only screen and (max-width: 850px) {
             #hd {
                 left: 8%;
                 width: 76%;
                 font-size: 1.4rem;
             }
-
             .edge {
                 display: none;
             }
         }
-
+        
         .edge {
             background-color: rgb(92, 185, 64);
             position: absolute;
@@ -74,32 +72,32 @@
             width: 200px;
             height: 100vh;
         }
-
+        
         .menu {
             height: 30px;
             width: 75%;
         }
-
+        
         .menu:hover {
             background-color: black;
         }
-
+        
         .left {
             border-left: 2px solid #000 !important;
         }
-
+        
         .right {
             border-right: 2px solid #000 !important;
         }
-
+        
         .top {
             border-top: 2px solid #000 !important;
         }
-
+        
         .bottom {
             border-bottom: 2px solid #000 !important;
         }
-
+        
         .button {
             -webkit-transition-duration: 0.4s;
             /* Safari */
@@ -115,37 +113,31 @@
             font-weight: bold;
             cursor: pointer;
         }
-
+        
         .button:hover {
-
             -webkit-animation-play-state: paused;
             animation-play-state: paused;
             background-color: crimson;
             color: white;
-
             margin-top: 30px;
-
         }
-
+        
         @keyframes load {
             50% {
                 width: 100%;
             }
         }
-
+        
         @keyframes drop {
-
-            0,
+            0%,
             100% {
                 top: -400px;
                 opacity: 0;
             }
-
             5% {
                 top: 75px;
                 opacity: 0.94;
             }
-
             95% {
                 top: 75px;
                 opacity: 0.94;
@@ -158,86 +150,46 @@
     <div id="table">
         <center>
             <p>
-                <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
-                    class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top"
-                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number"
-                    min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0"
-                    max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
-                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left"
-                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0"
-                    max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" class="right" type="number" min="0" max="9"><br>
-                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left"
-                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0"
-                    max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" class="right" type="number" min="0" max="9"><br>
-                <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
-                    class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top"
-                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number"
-                    min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0"
-                    max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
-                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left"
-                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0"
-                    max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" class="right" type="number" min="0" max="9"><br>
-                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left"
-                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0"
-                    max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" class="right" type="number" min="0" max="9"><br>
-                <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
-                    class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top"
-                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number"
-                    min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0"
-                    max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="right top" type="number" min="0" max="9"><br>
-                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="left"
-                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0"
-                    max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
-                    maxlength="1" class="right" type="number" min="0" max="9"><br>
-                <input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input
-                    autocomplete="off" maxlength="1" class="bottom right" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number"
+                    min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top"
+                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="right top" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
+                    maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
+                    maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number"
+                    min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top"
+                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="right top" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
+                    maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
+                    maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number"
+                    min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top"
+                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="top" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="right top" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off"
+                    maxlength="1" class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="right" type="number" min="0" max="9"><br>
+                <input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number"
+                    min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom"
+                    type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom left" type="number" min="0" max="9"><input autocomplete="off" maxlength="1" class="bottom" type="number" min="0" max="9"><input autocomplete="off" maxlength="1"
+                    class="bottom right" type="number" min="0" max="9"><br>
             </p>
             <script>
                 var S = [];
                 var i, elemnt, d, start, kt, t;
+
                 function tamdung() {
                     tamdung();
                 }
+
                 function printSolution() {
                     for (i = 0; i < 81; i++) {
                         elemnt = document.getElementsByTagName('input')[i];
@@ -247,15 +199,18 @@
 
                     tamdung();
                 }
+
                 function feasible(x, y, k) {
-                    var i = 0, j = 0;
+                    var i = 0,
+                        j = 0;
                     for (i = 0; i < 9; i++) {
                         if (S[9 * x + i] == k) return 0;
                     }
                     for (i = 0; i < 9; i++) {
                         if (S[9 * i + y] == k) return 0;
                     }
-                    var a = (x - x % 3) / 3, b = (y - y % 3) / 3;
+                    var a = (x - x % 3) / 3,
+                        b = (y - y % 3) / 3;
                     for (i = 3 * a; i < 3 * a + 3; i++) {
                         for (j = 3 * b; j < 3 * b + 3; j++) {
                             if (S[9 * i + j] == k) return 0;
@@ -264,6 +219,7 @@
                     return 1;
 
                 }
+
                 function again() {
                     for (i = 0; i < 81; i++) {
                         elemnt = document.getElementsByTagName('input')[i]
@@ -273,18 +229,22 @@
                     }
                     console.clear();
                 }
+
                 function solve_sudoku(x, y) {
                     d = new Date();
                     kt = d.getTime();
-                    if (kt - start > 1000) { alert('Không giải được'); again(); tamdung(); }
+                    if (kt - start > 1000) {
+                        alert('Không giải được');
+                        again();
+                        tamdung();
+                    }
                     if (y == 9) {
                         if (x == 8) {
                             printSolution();
                         } else {
                             solve_sudoku(x + 1, 0);
                         }
-                    }
-                    else if (S[9 * x + y] == 0) {
+                    } else if (S[9 * x + y] == 0) {
                         var k = 0;
                         for (k = 1; k <= 9; k++) {
                             if (feasible(x, y, k)) {
@@ -297,6 +257,7 @@
                         solve_sudoku(x, y + 1);
                     }
                 }
+
                 function run() {
                     /*	S =     [0,3,1,2,0,0,0,7,9,
                                 5,4,0,0,0,9,1,0,0,
@@ -312,14 +273,15 @@
                     for (i = 0; i < 81; i++) {
                         elemnt = document.getElementsByTagName('input')[i]
                         S[i] = elemnt.valueAsNumber;
-                        if (S[i] != S[i] || S[i] > 9 || S[i] <= 0) { S[i] = 0; elemnt.style.color = 'green'; }
+                        if (S[i] != S[i] || S[i] > 9 || S[i] <= 0) {
+                            S[i] = 0;
+                            elemnt.style.color = 'green';
+                        }
                     }
                     solve_sudoku(0, 0);
                 }
-
             </script>
-            <button class="button"
-                onclick="console.clear();document.getElementById('load').style.animation = 'load 0.4s 0s';run();">Solve</button><br />
+            <button class="button" onclick="console.clear();document.getElementById('load').style.animation = 'load 0.4s 0s';run();">Solve</button><br />
             <button class="button" onclick="document.getElementById('hd').style.animation = 'drop 15s 0s';t=setTimeout(function(){
             document.getElementById('hd').style.animation = '';
         }, 15100); ">Hướng dẫn</button>
@@ -341,8 +303,7 @@
             <span class="hd">
                 <li>Sau khi nhập xong bấm Solve để giải</li>
             </span>
-            <div style="position: absolute; top: 4px;right: 6px;"><a style="color: red; cursor: pointer;"
-                    onclick="document.getElementById('hd').style.animation = '' ;clearTimeout(t);">X</a></div>
+            <div style="position: absolute; top: 4px;right: 6px;"><a style="color: red; cursor: pointer;" onclick="document.getElementById('hd').style.animation = '' ;clearTimeout(t);">X</a></div>
         </div>
 
         <div id="leleft" class="edge" style="left: 0px;">
@@ -354,14 +315,11 @@
                         Trang chủ&emsp;&emsp;&nbsp;</a></div><br />
                 <div class="menu"><a href="#" style="text-decoration: none;color: honeydew;cursor: pointer; ">&emsp;
                         Liên hệ&emsp;&emsp;&emsp;&nbsp;</a></div><br />
-                <div class="menu"><a href="/typing-test/"
-                        style="text-decoration: none;color: honeydew;cursor: pointer;">&emsp;
+                <div class="menu"><a href="/typing-test/" style="text-decoration: none;color: honeydew;cursor: pointer;">&emsp;
                         Typing-test&emsp;&nbsp;</a></div><br />
-                <div class="menu"><a href="/sudoku/"
-                        style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp;
+                <div class="menu"><a href="/sudoku/" style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp;
                         Sudoku&emsp;&emsp;&emsp;</a></div><br />
-                <div class="menu"><a href="/win-lock-screen/"
-                        style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp; Windows
+                <div class="menu"><a href="/win-lock-screen/" style="text-decoration: none; color: honeydew;cursor: pointer;">&emsp; Windows
                         10&emsp;&nbsp;</a></div>
             </div>
         </div>
@@ -371,13 +329,10 @@
                         src="/404.html">
                     </iframe>YouTube</div> -->
                 <div style="position: absolute; top:90vh; left: 45px;">
-                    <a href="http://fb.com" target="_blank"><img src="/image/fb.png" alt="facebook"
-                            style="width: 30px;height:30px; margin-right:10px;"></a>
+                    <a href="http://fb.com" target="_blank"><img src="/image/fb.png" alt="facebook" style="width: 30px;height:30px; margin-right:10px;"></a>
 
-                    <a href="http://gmail.com" target="_blank"><img src="/image/mail.png" alt="Mail"
-                            style="width: 30px;height:30px;margin-right:10px;"></a>
-                    <a href="http://github.com/amaagroup" target="_blank"><img src="/image/github.png" alt="Github"
-                            style="width: 30px;height:30px;"></a>
+                    <a href="http://gmail.com" target="_blank"><img src="/image/mail.png" alt="Mail" style="width: 30px;height:30px;margin-right:10px;"></a>
+                    <a href="http://github.com/amaagroup" target="_blank"><img src="/image/github.png" alt="Github" style="width: 30px;height:30px;"></a>
                 </div>
             </center>
         </div>
