@@ -12,13 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
             let count = 0;
             let columns = document.querySelectorAll('.column');
             let clock = new Date();
-            document.querySelector("#start").innerHTML = '...';
+            document.querySelector("#start").style.display = 'none';
+            document.querySelector('#result').style.opacity = '0';
             stopped = false;
             toppx.splice(0, toppx.length);
             startTime = clock.getTime();
             columns.forEach((i) => {
                 toppx.push(-240);
-                let Speed = Math.random() * 3 + 2;
+                let Speed = Math.random() * 3 + 1.5;
                 timer[count] = setInterval((whichcolumn, columnindex, speed) => {
                     whichcolumn.style.top = (toppx[columnindex]) + 'px';
                     toppx[columnindex] += speed;
@@ -62,19 +63,21 @@ function smoothStop() {
         };
     }
     stopped = true;
-    document.querySelector("#start").innerHTML = 'Start';
+    document.querySelector("#start").style.display = 'block';
 }
 
 function checkJackpot() {
     let columns = document.querySelectorAll('.column');
+    let alertbox = document.querySelector('#result');
     for (let i = 0; i < columns.length; i++) {
         columns[i].style.top = toppx[i] + 'px';
         result[i] = columns[i].children[Math.abs(Math.ceil(toppx[i])) / 80 + 1].textContent;
     }
     if (result.every((val, i, arr) => val === arr[0])) {
-        window.alert("Congratulation!");
+        alertbox.textContent = "Congratulation!";
         if (result[0] === "7") {
-            window.alert("Jackpot!!!");
+            alertbox.textContent = "Jackpot!!!";
         }
+        alertbox.style.opacity = '1';
     }
 }
