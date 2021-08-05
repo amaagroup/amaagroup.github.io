@@ -83,3 +83,27 @@ body {
     background-color: lime;
     cursor: pointer;
 }
+
+.row[data-colors="bar"] {
+    color: blue;
+}
+
+.row[data-colors="lemon"] {
+    color: lemonchiffon;
+    font-size: 20px;
+}
+
+.row[data-colors="coin"] {
+    color: yellow;
+    font-weight: bolder;
+}
+
+.row[data-colors="grape"] {
+    color: purple;
+    font-size: 20px;
+}
+
+.row[data-colors="7"] {
+    color: red;
+    font-weight: bolder;
+}

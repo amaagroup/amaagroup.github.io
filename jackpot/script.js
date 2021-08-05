@@ -3,7 +3,7 @@
 var stopped = true;
 var timer = [];
 var toppx = [];
-var result = []
+var result = [];
 var startTime, duration = 5000;
 document.addEventListener("DOMContentLoaded", () => {
     let startbut = document.querySelector('#start');
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let count = 0;
             let columns = document.querySelectorAll('.column');
             let clock = new Date();
-            document.querySelector("#start").innerHTML = 'Stop';
+            document.querySelector("#start").innerHTML = '...';
             stopped = false;
             toppx.splice(0, toppx.length);
             startTime = clock.getTime();
@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (toppx[columnindex] >= 0) {
                         let rows = whichcolumn.children;
                         whichcolumn.insertBefore(rows[rows.length - 1], rows[0]);
+                        rows = whichcolumn.children;
+                        whichcolumn.insertBefore(rows[rows.length - 1], rows[0]);
+                        rows = whichcolumn.children;
+                        whichcolumn.insertBefore(rows[rows.length - 1], rows[0]);
                         toppx[columnindex] = -240;
                     }
                     let currentTime = new Date().getTime();
@@ -32,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 0, i, count, Speed);
                 count++;
             })
-        } else {
-            smoothStop();
         }
     })
 })
@@ -69,6 +71,10 @@ function checkJackpot() {
         columns[i].style.top = toppx[i] + 'px';
         result[i] = columns[i].children[Math.abs(Math.ceil(toppx[i])) / 80 + 1].textContent;
     }
-    if (result.every((val, i, arr) => val === arr[0]))
+    if (result.every((val, i, arr) => val === arr[0])) {
         window.alert("Congratulation!");
+        if (result[0] === "7") {
+            window.alert("Jackpot!!!");
+        }
+    }
 }
