@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     let currentTime = new Date().getTime();
                     if (currentTime - startTime >= duration) smoothStop();
-                }, 0, i, count, 4);
+                }, 0, i, count, Speed);
                 count++;
             })
         } else {
