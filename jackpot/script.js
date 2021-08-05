@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         } else {
             smoothStop();
-            stopped = true;
         }
     })
 })
@@ -60,6 +59,7 @@ function smoothStop() {
             }, 10, i);
         };
     }
+    stopped = true;
     document.querySelector("#start").innerHTML = 'Start';
 }
 
