@@ -9,10 +9,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             let Input = document.querySelector('input');
+            Input.value = (window.location.origin !== "null")?window.location.origin:window.location.href;
             document.querySelector('button').onclick = function() {
                 if (!Input.value.startsWith('http'))
                 	Input.value = 'https://' + Input.value;
-                console.log(Input.value);
                 window.location.href = Input.value;
             }
         })
@@ -97,8 +97,8 @@
 
 <body>
     <div>
-        <input type="text" name="url" placeholder="https://" value="https://amaagroup.github.io" spellcheck="false"><span></span></input>
-        <button type="submit"></button>
+        <input type="text" name="url" placeholder="https://" spellcheck="false"><span></span></input>
+        <button></button>
     </div>
 </body>
 
