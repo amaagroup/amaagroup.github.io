@@ -10,6 +10,8 @@
         document.addEventListener("DOMContentLoaded", () => {
             let Input = document.querySelector('input');
             document.querySelector('button').onclick = function() {
+                if (!Input.value.startsWith('http'))
+                	Input.value = 'https://' + Input.value;
                 console.log(Input.value);
                 window.location.href = Input.value;
             }
