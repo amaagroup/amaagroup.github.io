@@ -9,7 +9,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             let Input = document.querySelector('input');
-            Input.value = (window.location.origin !== "null")?window.location.origin:window.location.href;
+            Input.value = 'https://example.com/';
             document.querySelector('button').onclick = function() {
                 if (!Input.value.startsWith('http'))
                 	Input.value = 'https://' + Input.value;
@@ -82,6 +82,7 @@
             border-radius: 10px;
             color: white;
             cursor: pointer;
+            outline: none;
             transition: 0.4s;
         }
         
@@ -89,7 +90,8 @@
             content: 'Go';
         }
         
-        button:hover {
+        button:hover,
+        button:focus {
             background-color: rgb(8, 154, 173);
         }
     </style>
